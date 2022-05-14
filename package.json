@@ -1,0 +1,19 @@
+{
+  "name": "scraper-cli",
+  "version": "1.0.0",
+  "description": "Scrape Anything you love! In minutes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code123841/Scrapers.io.git"
+  },
+  "author": "Udhay.r",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/code123841/Scrapers.io/issues"
+  },
+  "homepage": "https://github.com/code123841/Scrapers.io#readme"
+}
