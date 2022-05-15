@@ -20,8 +20,7 @@ const options = program.opts();
 console.log(options);
 
 if (options.scrape) console.log('  Scrape!');
-if (options.pineapple) console.log('  - pineapple');
-if (options.bbq) console.log('  - bbq');
+if (options.ds) console.log('ds');
 
 // const cheese: string = undefined === options.cheese
 //     ? 'marble'
@@ -29,8 +28,8 @@ if (options.bbq) console.log('  - bbq');
 
 // console.log('  - %s cheese', cheese);
 
-// if (!process.argv.slice(2).length) {
-//   program.outputHelp();
-// }
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}
 
 }
