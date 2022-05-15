@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "Scrape Anything you love! In minutes",
   "main": "index.js",
-
   "bin": {
     "hello": "./build/main.js"
   },
@@ -11,10 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "pkg . --targets node14-linux-x64 --output hello"
   },
-  "pkg":{
+  "pkg": {
     "scripts": "build/**/*.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/code123841/Scrapers.io.git"
@@ -32,6 +30,11 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "commander": "^9.2.0",
+    "figlet": "^1.5.2",
+    "path": "^0.12.7",
     "yargs": "^17.5.0"
   }
 }
