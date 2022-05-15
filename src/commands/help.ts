@@ -13,6 +13,7 @@ program
   .description("Scrpe Your Favorite websites in minutes!")
   .option('-s, --scrape ', 'Scrape Your Website')
   .option('-ds, --Defaultsites', 'Templates we have for you')
+  .option('-h, --help', 'Help')
 
   .parse(process.argv);
 
@@ -21,6 +22,7 @@ console.log(options);
 
 if (options.scrape) console.log('  Scrape!');
 if (options.ds) console.log('ds');
+if(options.help) console.log("helping");
 
 // const cheese: string = undefined === options.cheese
 //     ? 'marble'
