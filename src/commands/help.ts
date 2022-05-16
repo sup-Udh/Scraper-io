@@ -22,14 +22,21 @@ console.log(options);
 
 if (options.scrape){
   // ask for search term
-  let searchterm : string;
-  searchterm = await prompt({
-    type: 'input',
-    name: 'searchterm',
-    message: 'What do you want to search for?',
-  });
-  scrapeFunction1(searchterm);
-
+  const response = await prompt([
+    {
+      type: 'input',
+      name: 'Site',
+      message: 'Site You want to scrape?'
+    },
+    {
+      type: 'input',
+      name: 'Search',
+      message: 'Your Search Query'
+    }
+  ]);
+  console.log(response);
+  scrapeFunction1(response.Site, response.Search);
+   
 }
 if (options.ds) console.log('ds');
 if(options.help) console.log("helping");
