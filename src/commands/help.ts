@@ -4,7 +4,10 @@ let figlet = require('figlet');
 let path = require('path');
 let program = require('commander');
 import { scrapeFunction1 } from "./scrapeFunction1";
-export function help() {
+
+const { prompt } = require('enquirer');
+
+export async  function help() {
 program
   .version('0.0.1 --Pre-Alpha')
   .description("Scrpe Your Favorite websites in minutes!")
@@ -19,8 +22,12 @@ console.log(options);
 
 if (options.scrape){
   // ask for search term
-  let searchterm : any;
-  searchterm = prompt("Please enter a search term");
+  let searchterm : string;
+  searchterm = await prompt({
+    type: 'input',
+    name: 'searchterm',
+    message: 'What do you want to search for?',
+  });
   scrapeFunction1(searchterm);
 
 }
