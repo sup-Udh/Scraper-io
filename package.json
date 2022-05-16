@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "package": "pkg . --targets node14-linux-x64 --output hello",
-    "build": "npx tsc"
+    "build": "npx tsc && node ./build/main.js"
   },
   "pkg": {
     "scripts": "build/**/*.js"
