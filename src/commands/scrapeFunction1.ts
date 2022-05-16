@@ -1,9 +1,10 @@
 export function scrapeFunction1(searchTerm : string){
-    if(searchTerm === ""){
-        console.log("Please enter a search term");
+    // check the url if the url is amazon.com then console.log the url
+    // if the url is not amazon.com then console.log the url
+    if(searchTerm.includes("amazon")){
+        console.log('has amazon :) ')
     }else{
-        JSON.stringify(searchTerm);
-        console.log("Scraping " + searchTerm);
+        console.log('no amazon')
     }
     
 }
