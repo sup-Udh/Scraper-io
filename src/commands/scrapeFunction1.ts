@@ -1,3 +1,7 @@
+import { title } from "process";
+
+declare var require: any
+
 let puppetter = require('puppeteer');
 
 
@@ -7,18 +11,57 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
     var stringified = JSON.stringify(searchTerm);
     var textified = stringified.toString();
 
+    if (typeof window !== 'undefined') {
+        console.log('You are on the browser')
+      } else {
+        console.log('You are on the server')
+      }
 
     async function amazonFunction(){
-        const browser = await puppetter.launch({
-            headless: false,
-            defaultViewport: null,
-            args: ['--start-maximized'],
+  
+      
+        if(!SearthQuery){
+            console.log('user did not enter a search query exiting...');
+        }else{
+            const browser = await puppetter.launch({
+                headless: false,
+                defaultViewport: null,
+                args: ['--start-maximized'],
+            });
+
+            const page = await browser.newPage();
+            await page.goto(`https://www.${searchTerm}.com/`);
+            // search in the search box with the search Query 
+            await page.waitFor(2000)
+            await page.type('#twotabsearchtextbox', SearthQuery , {delay: 100});
+            // wait till the search query is entered
+            await page.waitFor(2000);
+            await page.click('#nav-search-submit-button');
+            await page.waitFor(2000);
+
+        const pages = await page.evaluate(() => {
+            const pages = document.querySelectorAll('.a-pagination .a-selected');
+            return pages.length ? pages[0].textContent : 1;
+
         });
-        const page = await browser.newPage();
-        await page.goto(`https://www.${searchTerm}.com/`);
-        
-        await browser.close();
+        // get the number of pages limit to 5 pages then get the product name and price of each product
+        for (let i = 1; i <= pages; i++) {
+            await page.goto(`https://www.${searchTerm}.com/s?k=${SearthQuery}&page=${i}`);
+            await page.waitFor(2000);
+            const productName = await page.evaluate(() => {
+                const productName = document.querySelectorAll('.a-color-base.a-text-normal');
+                return Array.from(productName).map(product => product.textContent);
+            });
+            const productPrice = await page.evaluate(() => {
+                const productPrice = document.querySelectorAll('.a-price-whole');
+                return Array.from(productPrice).map(product => product.textContent);
+            });
+            console.log(productName);
+            console.log(productPrice);
+
+        }
     }
+}
 
 
     if(textified.includes("amazon")){       
