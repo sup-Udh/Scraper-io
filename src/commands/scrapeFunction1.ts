@@ -54,8 +54,10 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
                 const productPrice = document.querySelectorAll('.a-price-whole');
                 return Array.from(productPrice).map(product => product.textContent);
             });
-            console.log(productName);
-            console.log(productPrice);
+            return{
+                productName: productName,
+                productPrice: productPrice
+            }
 
         }
     }
