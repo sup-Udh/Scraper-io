@@ -1,5 +1,3 @@
-import { title } from "process";
-
 declare var require: any
 
 let puppetter = require('puppeteer');
