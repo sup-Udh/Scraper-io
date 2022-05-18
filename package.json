@@ -8,6 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "npm run build && npm run test",
     "package": "pkg . --targets node14-linux-x64 --output scraper",
     "build": "npx tsc "
   },
@@ -31,6 +32,7 @@
     "typescript": "^4.6.4"
   },
   "dependencies": {
+    "@types/puppeteer": "^5.4.6",
     "chalk": "^4.1.2",
     "clear": "^0.1.0",
     "commander": "^9.2.0",
