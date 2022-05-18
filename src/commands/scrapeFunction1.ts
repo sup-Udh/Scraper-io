@@ -16,7 +16,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
     if (typeof window !== 'undefined') {
         console.log('You are on the browser')
       } else {
-        console.log('You are on the server')
+        console.log('Disconnected from browser')
       }
 
     async function amazonFunction(){
@@ -32,7 +32,9 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             });
 
             const page = await browser.newPage();
-            await page.goto(`https://www.${searchTerm}.com/`);
+            const url = `https://www.${searchTerm}.com`;
+            
+            await page.goto(url);
             // search in the search box with the search Query 
             await page.waitForTimeout(2000)
             await page.type('#twotabsearchtextbox', SearthQuery , {delay: 100});
@@ -40,6 +42,30 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             await page.waitForTimeout(2000);
             await page.click('#nav-search-submit-button');
             await page.waitForTimeout(2000);
+           
+            let productprice;
+            let productname;
+
+                var loading = (function() {
+                    var h = ['|', '/', '-', '\\'];
+                    var i = 0;
+                  
+                    return setInterval(() => {
+                      i = (i > 3) ? 0 : i;
+                      console.clear();
+                      console.log(h[i]);
+                      i++;
+                    }, 300);
+                  })();
+                    setTimeout(() => {
+                        clearInterval(loading);
+                        console.clear();
+                        // 50 seconds is the time limit for the search
+                    }, 1000); ;
+     
+                
+
+            
 
         const pages = await page.evaluate(() => {
             const pages = document.querySelectorAll('.a-pagination .a-selected');
@@ -47,26 +73,34 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
 
         });
         // get the number of pages limit to 5 pages then get the product name and price of each product
+
+        // display loding for 1 minute
+            
+
         for (let i = 1; i <= pages!; i++) {
             await page.goto(`https://www.${searchTerm}.com/s?k=${SearthQuery}&page=${i}`);
             await page.waitForTimeout(2000);
             const productName = await page.evaluate(() => {
                 const productName = document.querySelectorAll('.a-color-base.a-text-normal');
                 return Array.from(productName).map(product => product.textContent);
-            });
-            const productPrice = await page.evaluate(() => {
+            });let productPrice = await page.evaluate(() => {
                 const productPrice = document.querySelectorAll('.a-price-whole');
                 return Array.from(productPrice).map(product => product.textContent);
                 
             });
-            console.log(productName);
-            console.log(productPrice);
-          
+            // till the process is done console.log saying we're getting with animation         
+            var products = []
+            var product = {
+                name: productName,
+                price: productPrice
+            }
+            products.push(product);
+            console.log(products);
 
         }
-    }
+    
 }
-
+    }
 
     if(textified.includes("amazon")){       
         amazonFunction();
