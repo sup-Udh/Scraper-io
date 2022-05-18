@@ -1,6 +1,6 @@
 declare var require: any
 
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 
 declare module 'puppeteer' {
   export interface Page {
