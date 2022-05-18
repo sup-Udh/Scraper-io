@@ -18,13 +18,14 @@ export default function Home() {
 
       </div>
 
-      <div className="flex justify-end pr-[5rem] lg:mt-[-28rem] md: mt-[10rem] ">
+      <div className="flex justify-end pr-[5rem] lg:mt-[-28rem] md: mt-[5rem] ">
         <Image
-        className="mt-[-10rem]"
+        className="md: mt"
           src={thumbnail}
           height={800}
           width={900}
         />
+        
 
       </div>
     </body>
