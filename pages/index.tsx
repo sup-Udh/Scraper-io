@@ -22,10 +22,10 @@ export default function Home() {
         <Image
         className="md: mt"
           src={thumbnail}
-          height={800}
-          width={900}
+          height={500}
+          width={600}
         />
-        
+
 
       </div>
     </body>
