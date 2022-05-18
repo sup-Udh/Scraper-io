@@ -1,8 +1,12 @@
 declare var require: any
 
-let puppetter = require('puppeteer');
+import puppeteer from 'puppeteer';
 
-
+declare module 'puppeteer' {
+  export interface Page {
+    waitForTimeout(duration: number): Promise<void>;
+  }
+}
 export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // searchTetrm => Site , Search => Query
     // check the url if the url is amazon.com then console.log the url
     // if the url is not amazon.com then console.log the url
@@ -21,7 +25,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
         if(!SearthQuery){
             console.log('user did not enter a search query exiting...');
         }else{
-            const browser = await puppetter.launch({
+            const browser = await puppeteer.launch({
                 headless: true,
                 defaultViewport: null,
                 args: ['--start-maximized'],
@@ -30,12 +34,12 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             const page = await browser.newPage();
             await page.goto(`https://www.${searchTerm}.com/`);
             // search in the search box with the search Query 
-            await page.waitFor(2000)
+            await page.waitForTimeout(2000)
             await page.type('#twotabsearchtextbox', SearthQuery , {delay: 100});
             // wait till the search query is entered
-            await page.waitFor(2000);
+            await page.waitForTimeout(2000);
             await page.click('#nav-search-submit-button');
-            await page.waitFor(2000);
+            await page.waitForTimeout(2000);
 
         const pages = await page.evaluate(() => {
             const pages = document.querySelectorAll('.a-pagination .a-selected');
@@ -43,9 +47,9 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
 
         });
         // get the number of pages limit to 5 pages then get the product name and price of each product
-        for (let i = 1; i <= pages; i++) {
+        for (let i = 1; i <= pages!; i++) {
             await page.goto(`https://www.${searchTerm}.com/s?k=${SearthQuery}&page=${i}`);
-            await page.waitFor(2000);
+            await page.waitForTimeout(2000);
             const productName = await page.evaluate(() => {
                 const productName = document.querySelectorAll('.a-color-base.a-text-normal');
                 return Array.from(productName).map(product => product.textContent);
@@ -74,4 +78,4 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
     
 }
 
-//  sample URL: https://www.amazon.com/s?k=iphone&ref=nb_sb_noss_2
+//  sample URL: 
