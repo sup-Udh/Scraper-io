@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "package": "pkg . --targets node14-linux-x64 --output hello",
+    "package": "pkg . --targets node14-linux-x64 --output scraper",
     "build": "npx tsc "
   },
   "pkg": {
