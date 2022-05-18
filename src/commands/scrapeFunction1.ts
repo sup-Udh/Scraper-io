@@ -22,7 +22,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             console.log('user did not enter a search query exiting...');
         }else{
             const browser = await puppetter.launch({
-                headless: false,
+                headless: true,
                 defaultViewport: null,
                 args: ['--start-maximized'],
             });
@@ -53,11 +53,11 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             const productPrice = await page.evaluate(() => {
                 const productPrice = document.querySelectorAll('.a-price-whole');
                 return Array.from(productPrice).map(product => product.textContent);
+                
             });
-            return{
-                productName: productName,
-                productPrice: productPrice
-            }
+            console.log(productName);
+            console.log(productPrice);
+          
 
         }
     }
