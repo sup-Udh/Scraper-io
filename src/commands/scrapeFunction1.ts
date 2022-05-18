@@ -89,13 +89,20 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
                 
             });
             // till the process is done console.log saying we're getting with animation         
-            var products = []
-            var product = {
-                name: productName,
-                price: productPrice
+            // get each product name and price and put them into json keys
+            productname = productName;
+            productprice = productPrice;
+            var jsonArray = [];
+            // for each
+            for (let i = 0; i < productname.length; i++) {
+                let json = {
+                    productname: productname[i],
+                    productprice: productprice[i]
+                }
+                // push the json into the array
+                jsonArray.push(json);
             }
-            products.push(product);
-            console.log(products);
+            console.log(jsonArray);
 
         }
     
@@ -111,5 +118,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
 
     
 }
+
+
 
 //  sample URL: 
