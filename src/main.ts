@@ -16,3 +16,27 @@ help();
 //     console.log(productName);
 //     console.log(productPrice);
   
+// <h2 align="center">Scraper-io</h2>
+
+
+// <p align="center">
+  
+// <img src="https://img.shields.io/github/languages/code-size/code123841/Scraper-Io">
+// <img src="https://img.shields.io/tokei/lines/github/code123841/Scraper-Io">
+// </p>
+// <h3>Web Scraping
+// simplified.</h3>
+
+// <p>
+// Focus on extracting the data you need,<br />
+// and not dealing with concurrent headless<br />
+// browsers that will eat up all your RAM and CPU.
+
+// </p>
+
+// <h2>  🚀 Installation </h2>
+// <p>
+//   We don't have an official release of Scraper. This CLI Is still under the works 🏗️
+//   </p>
+  
+  
