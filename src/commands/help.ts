@@ -8,6 +8,9 @@ import { scrapeFunction1 } from "./scrapeFunction1";
 const { prompt } = require('enquirer');
 
 export async  function help() {
+
+
+
 program
   .version('0.0.1 --Pre-Alpha')
   .description("Scrpe Your Favorite websites in minutes!")
