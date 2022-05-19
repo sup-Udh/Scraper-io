@@ -37,6 +37,8 @@
     "clear": "^0.1.0",
     "commander": "^9.2.0",
     "enquirer": "^2.3.6",
-    "puppeteer": "^14.1.0"
+    "figlet": "^1.5.2",
+    "puppeteer": "^14.1.0",
+    "tar": "^6.1.11"
   }
 }
