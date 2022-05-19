@@ -43,25 +43,24 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             await page.click('#nav-search-submit-button');
             await page.waitForTimeout(2000);
            
-            let productprice;
-            let productname;
+            
 
-                var loading = (function() {
-                    var h = ['|', '/', '-', '\\'];
-                    var i = 0;
+                // var loading = (function() {
+                //     var h = ['|', '/', '-', '\\'];
+                //     var i = 0;
                   
-                    return setInterval(() => {
-                      i = (i > 3) ? 0 : i;
-                      console.clear();
-                      console.log(h[i]);
-                      i++;
-                    }, 300);
-                  })();
-                    setTimeout(() => {
-                        clearInterval(loading);
-                        console.clear();
-                        // 50 seconds is the time limit for the search
-                    }, 1000); ;
+                //     return setInterval(() => {
+                //       i = (i > 3) ? 0 : i;
+                //       console.clear();
+                //       console.log(h[i]);
+                //       i++;
+                //     }, 300);
+                //   })();
+                //     setTimeout(() => {
+                //         clearInterval(loading);
+                //         console.clear();
+                //         // 50 seconds is the time limit for the search
+                //     }, 1000); ;
      
                 
 
@@ -90,19 +89,18 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             });
             // till the process is done console.log saying we're getting with animation         
             // get each product name and price and put them into json keys
-            productname = productName;
-            productprice = productPrice;
-            var jsonArray = [];
-            // for each
-            for (let i = 0; i < productname.length; i++) {
-                let json = {
-                    productname: productname[i],
-                    productprice: productprice[i]
-                }
-                // push the json into the array
-                jsonArray.push(json);
-            }
-            console.log(jsonArray);
+            console.log(productName );
+            // var jsonArray = [];
+            // // for each
+            // for (let i = 0; i < productname.length; i++) {
+            //     let json = {
+            //         productname: productname[i],
+            //         productprice: productprice[i]
+            //     }
+            //     // push the json into the array
+            //     jsonArray.push(json);
+            // }
+            // console.log(jsonArray);
 
         }
     
