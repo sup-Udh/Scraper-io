@@ -8,5 +8,7 @@ tar.c(
       gzip: true,
       file: 'my-tarball.tgz'
     },
-    ['./src/commands/scrapeFunction1.ts']
+    ['./src']
   ).then((_: any) => { console.log('done') })
+
+
