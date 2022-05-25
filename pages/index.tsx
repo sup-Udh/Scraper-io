@@ -2,8 +2,12 @@ import Image from "next/image"
 import thumbnail from "../public/thubnail.png"
 export default function Home() {
   return (
+    
     <body className="bg-[#141623]">
+      
+{/* add a meta tag that reads the url */}
 
+<meta name="url" content="https://www.example.com/"/>
 
       <div className="pl-10 pt-[15rem]">
         <h1 className="text-[5rem] text-white font-inter font-bold">
