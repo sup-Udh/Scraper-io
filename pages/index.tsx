@@ -1,29 +1,23 @@
 import Image from "next/image"
 import thumbnail from "../public/thubnail.png"
 import Head from "next/head"
+import logo from "../public/logo.png"
 import { Meta } from "../components/partials/Meta"
 export default function Home() {
   return (
     <>
     <Meta
-        title="Enviroso ━ A Social Platform for Environmental Activists"
-        description="Meet Enviroso, A platform built for environmental activists to network and organize cleanup missions."
-        keywords="enviornment, activist, network, pollution, cleanup, mission, organization, platform"
-        image="https://avatars.githubusercontent.com/u/95420495?s=200&v=4"
-        url="https://enviroso.netlify.app"
+        title="ScrapeCode ━  AI powered web scraper for all your needs"
+        description="Meet ScrapeCode ━  works great for general web scraping"
+        keywords="Web Scraping, Coding, AI powered web scraper, ScrapeCode"
+        image={logo}
+        url="https://scrape-code.vercel.app"
       />
     
     <body className="bg-[#141623]">
 
       {/* create a meta tag for the url */}
-      <Head>
-        {/* meta og:url */}
-        <meta property="og:title" content="rando" />
-<meta property="og:site_name" content="udhay's scraper" />
-<meta property="og:description" content="scraps potatos" />
-<meta property="og:image" content="/url" />
-<meta name="theme-color" content="#55bbee" />
-      </Head>
+
 
       <div className="pl-10 pt-[15rem]">
         

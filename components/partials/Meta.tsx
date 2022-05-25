@@ -4,7 +4,7 @@ interface MetaPropTypes {
   title: string;
   description: string;
   keywords: string;
-  image: string;
+  image: any;
   url: string;
 }
 
