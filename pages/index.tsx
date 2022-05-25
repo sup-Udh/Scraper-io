@@ -8,6 +8,7 @@ export default function Home() {
 {/* add a meta tag that reads the url */}
 
 <meta name="url" content="https://www.example.com/"/>
+{/* mets */}
 
       <div className="pl-10 pt-[15rem]">
         <h1 className="text-[5rem] text-white font-inter font-bold">
