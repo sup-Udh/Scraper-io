@@ -1,8 +1,17 @@
 import Image from "next/image"
 import thumbnail from "../public/thubnail.png"
 import Head from "next/head"
+import { Meta } from "../components/partials/Meta"
 export default function Home() {
   return (
+    <>
+    <Meta
+        title="Enviroso ━ A Social Platform for Environmental Activists"
+        description="Meet Enviroso, A platform built for environmental activists to network and organize cleanup missions."
+        keywords="enviornment, activist, network, pollution, cleanup, mission, organization, platform"
+        image="https://avatars.githubusercontent.com/u/95420495?s=200&v=4"
+        url="https://enviroso.netlify.app"
+      />
     
     <body className="bg-[#141623]">
 
@@ -41,6 +50,7 @@ export default function Home() {
 
       </div>
     </body>
+    </>
 
   )
 }
