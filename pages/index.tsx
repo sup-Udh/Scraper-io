@@ -8,10 +8,8 @@ export default function Home() {
 
       {/* create a meta tag for the url */}
       <Head>
-      <meta name="url" content="https://www.example.com" />
-      <meta name="description" content="This is a description of the page" />
-      <meta name="keywords" content="keyword1, keyword2, keyword3" />
-      <meta name="author" content="Your Name" />
+        {/* meta og:url */}
+        <meta property="og:url" content="https://www.example.com" />
       </Head>
 
       <div className="pl-10 pt-[15rem]">
