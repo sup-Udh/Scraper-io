@@ -111,7 +111,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
         amazonFunction();
 
     }else{
-        console.log("not amazon.com");
+        
     }
 
     
