@@ -9,7 +9,11 @@ export default function Home() {
       {/* create a meta tag for the url */}
       <Head>
         {/* meta og:url */}
-        <meta property="og:url" content="https://www.example.com" />
+        <meta property="og:title" content="rando" />
+<meta property="og:site_name" content="udhay's scraper" />
+<meta property="og:description" content="scraps potatos" />
+<meta property="og:image" content="/url" />
+<meta name="theme-color" content="#55bbee" />
       </Head>
 
       <div className="pl-10 pt-[15rem]">
