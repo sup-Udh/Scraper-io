@@ -1,6 +1,7 @@
 declare var require: any
 
 import puppeteer from 'puppeteer';
+import {ScraperFunction2} from "./scraperFunction2"
 
 declare module 'puppeteer' {
   export interface Page {
@@ -111,6 +112,8 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
         amazonFunction();
 
     }else{
+        console.log("Moving to Next Scraper File")
+        ScraperFunction2()
         
     }
 
