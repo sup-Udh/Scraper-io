@@ -1,15 +1,18 @@
 import Image from "next/image"
 import thumbnail from "../public/thubnail.png"
+import Head from "next/head"
 export default function Home() {
   return (
     
     <body className="bg-[#141623]">
 
       {/* create a meta tag for the url */}
+      <Head>
       <meta name="url" content="https://www.example.com" />
       <meta name="description" content="This is a description of the page" />
       <meta name="keywords" content="keyword1, keyword2, keyword3" />
       <meta name="author" content="Your Name" />
+      </Head>
 
       <div className="pl-10 pt-[15rem]">
         
