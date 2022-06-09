@@ -19,12 +19,17 @@ export  function ScraperFunction2(searchQuery: string){
         // wait for the comments to load
         await page.waitForSelector('#comments');
         // get only one comment
-        const comment = await page.waitForSelector('#comments #content-text');
-        // get all the comments
+        
         const comments = await page.evaluate(() => {
-            const comments = document.querySelectorAll('#comments #content-text');
-            const commentText = Array.from(comments).map(comment => comment.textContent);
-            return commentText;
+            // for each comment construct a json object
+            const comments = document.querySelectorAll('#comments .comment-text-content');
+            const commentArray = Array.from(comments).map(comment => {
+                return {
+                    comment: comment.textContent,
+                };
+            }
+            );
+            return commentArray;
         });
         console.log(comments);
 
