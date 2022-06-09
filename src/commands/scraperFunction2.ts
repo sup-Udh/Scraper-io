@@ -20,11 +20,13 @@ export  function ScraperFunction2(searchQuery: string){
         await page.waitForSelector('#comments');
         // get only one comment
         const comment = await page.waitForSelector('#comments #content-text');
-        // get only one comment
-        const commentText = await page.evaluate(comment => comment.textContent, comment);
-        console.log(commentText);
-        // const commentText = await page.evaluate(comment => comment.textContent, comment);
-        // console.log(commentText);
+        // get all the comments
+        const comments = await page.evaluate(() => {
+            const comments = document.querySelectorAll('#comments #content-text');
+            const commentText = Array.from(comments).map(comment => comment.textContent);
+            return commentText;
+        });
+        console.log(comments);
 
 
 
