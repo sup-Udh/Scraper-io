@@ -17,15 +17,10 @@ export  function ScraperFunction2(searchQuery: string){
         // wait for the page to load
         await page.waitForTimeout(2000);
         // type the search query
-        await page.type('#search', 'puppeteer', {delay: 100});
-        // wait for the search query to be entered
         await page.waitForTimeout(2000);
-        // click the search button
-        await page.click('#search-icon-legacy');
-        // wait for the search button to be clicked
+        await page.click('#search');
         await page.waitForTimeout(2000);
-    
-
+        await page.type('#search', 'Hello world', {delay: 100});
 
 
     }
