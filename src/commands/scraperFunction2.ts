@@ -22,7 +22,7 @@ export  function ScraperFunction2(searchQuery: string){
         
         const comments = await page.evaluate(() => {
             // for each comment construct a json object
-            const comments = document.querySelectorAll('#comments .comment-text-content');
+            const comments = document.querySelectorAll('#comments #content-text');
             const commentArray = Array.from(comments).map(comment => {
                 return {
                     comment: comment.textContent,
