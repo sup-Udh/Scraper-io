@@ -8,7 +8,7 @@ export default function Home() {
     <>
     <Meta
         title="ScrapeCode ━  AI powered web scraper for all your needs"
-        description="Meet ScrapeCode ━  works great for general web scraping"
+        description="Meet ScrapeCode ━  works great for general web scraping and More!"
         keywords="Web Scraping, Coding, AI powered web scraper, ScrapeCode"
         image={logo}
         url="https://scrape-code.vercel.app"
