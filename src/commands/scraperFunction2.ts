@@ -13,14 +13,19 @@ export  function ScraperFunction2(searchQuery: string){
         // create a new page
         const page = await (await browser).newPage();
         // go to youtube
-        await page.goto('https://www.youtube.com/');
+        await page.goto('https://www.youtube.com/watch?v=lXIb-1_H-mA');
         // wait for the page to load
         await page.waitForTimeout(2000);
-        // type the search query
-        await page.waitForTimeout(2000);
-        await page.click('#search');
-        await page.waitForTimeout(2000);
-        await page.type('#search', 'Hello world', {delay: 100});
+        // wait for the comments to load
+        await page.waitForSelector('#comments');
+        // get only one comment
+        const comment = await page.waitForSelector('#comments #content-text');
+        // get only one comment
+        const commentText = await page.evaluate(comment => comment.textContent, comment);
+        console.log(commentText);
+        // const commentText = await page.evaluate(comment => comment.textContent, comment);
+        // console.log(commentText);
+
 
 
     }
