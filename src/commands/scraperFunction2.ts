@@ -6,7 +6,7 @@ export  function ScraperFunction2(searchQuery: string){
         // intialize puppteer
         async function youtubeComments(){
         const browser = puppeteer.launch({
-            headless: false,
+            headless: true,
             defaultViewport: null,
             args: ['--start-maximized'],
         });
@@ -18,21 +18,20 @@ export  function ScraperFunction2(searchQuery: string){
         await page.waitForTimeout(2000);
         // wait for the comments to load
         await page.waitForSelector('#comments');
-        // get only one comment
-        
-        const comments = await page.evaluate(() => {
-            // for each comment construct a json object
-            const comments = document.querySelectorAll('#comments #content-text');
-            const commentArray = Array.from(comments).map(comment => {
-                return {
-                    comment: comment.textContent,
-                };
-            }
-            );
-            return commentArray;
-        });
-        console.log(comments);
 
+        const comment = await page.waitForSelector('#comments #content-text');
+        // get only one comment
+        const commentText = await page.evaluate(comment => comment.textContent, comment);
+        console.log(commentText);
+        
+        // get all comments
+        const comments = await page.evaluate(() => {
+            const comments = document.querySelectorAll('#comments #content-text');
+            const commentText = Array.from(comments).map(comment => comment.textContent);
+            return commentText;
+        }
+        );
+        console.log(comments);
 
 
     }
