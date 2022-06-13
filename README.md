@@ -25,3 +25,5 @@
  </a>
  
  We don't have an official release of Scraper. This CLI Is still under the works 🚀
+
+Feel free to Donate here :- https://paypal.me/udhayRajeev
