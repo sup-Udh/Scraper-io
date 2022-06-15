@@ -37,10 +37,22 @@ export  async function scrapeFunction2(searchTerm : string) {
             });
           }
 
+
+
         await autoScroll(page);
         await page.waitForTimeout(2000);
 
+        const CommentCount = await page.evaluate(() => {
+
+            const comments = Array.from(document.querySelectorAll('#comments .style-scope yt-formatted-string')).map(comment => comment.textContent);
+            return comments;
+        }
+        );
+        console.log(CommentCount);
+
         const comments = await page.evaluate(() => {
+            // don't want array format of the comments
+            
             const comments = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
             return comments;
         }
