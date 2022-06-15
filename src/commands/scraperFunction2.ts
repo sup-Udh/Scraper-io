@@ -17,15 +17,34 @@ export  async function scrapeFunction2(searchTerm : string) {
         await page.goto(url);
         // wait for the page to load
         await page.waitForTimeout(2000);
-        
-        await page.evaluate(() => document.querySelector('#comments')!.scrollIntoView());
+    
+        const autoScroll = async (page: { evaluate: (arg0: () => Promise<void>) => any; }) => {
+            await page.evaluate(async () => {
+              await new Promise<void>((resolve, reject) => {
+                let totalHeight = 100;
+                const distance = 500;
+                const timer = setInterval(() => {
+                  const scrollHeight = document.body.scrollHeight;
+                  window.scrollBy(0, distance);
+                  totalHeight += distance;
+          
+                  if (totalHeight >= scrollHeight) {
+                    clearInterval(timer);
+                    resolve();
+                  }
+                }, 100);
+              });
+            });
+          }
 
-        // const comments = await page.evaluate(() => {
-        //     const comments = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
-        //     return comments;
-        // }
-        // );
-        // console.log(comments);
+        await autoScroll(page);
+
+        const comments = await page.evaluate(() => {
+            const comments = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
+            return comments;
+        }
+        );
+        console.log(comments);
     
 
  } 
