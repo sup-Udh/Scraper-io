@@ -109,7 +109,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
 
     }else{
         console.log("Moving to Next Scraper File")
-        scrapeFunction2(searchTerm)
+        scrapeFunction2(searchTerm, SearthQuery);
         
     }
 
