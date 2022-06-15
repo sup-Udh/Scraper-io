@@ -21,8 +21,8 @@ export  async function scrapeFunction2(searchTerm : string) {
         const autoScroll = async (page: { evaluate: (arg0: () => Promise<void>) => any; }) => {
             await page.evaluate(async () => {
               await new Promise<void>((resolve, reject) => {
-                let totalHeight = 100;
-                const distance = 500;
+                let totalHeight = 800;
+                const distance = 800;
                 const timer = setInterval(() => {
                   const scrollHeight = document.body.scrollHeight;
                   window.scrollBy(0, distance);
@@ -38,6 +38,7 @@ export  async function scrapeFunction2(searchTerm : string) {
           }
 
         await autoScroll(page);
+        await page.waitForTimeout(2000);
 
         const comments = await page.evaluate(() => {
             const comments = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
