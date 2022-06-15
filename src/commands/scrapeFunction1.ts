@@ -1,13 +1,9 @@
 declare var require: any
 
 import puppeteer from 'puppeteer';
-import {ScraperFunction2} from "./scraperFunction2"
+import { scrapeFunction2 } from "./scraperFunction2"
 
-declare module 'puppeteer' {
-  export interface Page {
-    waitForTimeout(duration: number): Promise<void>;
-  }
-}
+
 export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // searchTetrm => Site , Search => Query
     // check the url if the url is amazon.com then console.log the url
     // if the url is not amazon.com then console.log the url
@@ -113,7 +109,7 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
 
     }else{
         console.log("Moving to Next Scraper File")
-        ScraperFunction2(searchTerm)
+        scrapeFunction2(searchTerm)
         
     }
 
