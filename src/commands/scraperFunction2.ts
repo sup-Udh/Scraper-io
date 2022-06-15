@@ -1,7 +1,7 @@
 import { waitForDebugger } from "inspector";
 
 const puppeteer = require('puppeteer');
-export  async function scrapeFunction2(searchTerm : string) {
+export  async function scrapeFunction2(searchTerm : string, SearthQuery : string) { // searchTetrm => Site , Search => Query
     if(searchTerm === 'youtube'){
 
 
@@ -11,9 +11,10 @@ export  async function scrapeFunction2(searchTerm : string) {
             args: ['--start-maximized'],
         });
 
+
         const page = await browser.newPage();
-        const url = `https://www.youtube.com/watch?v=klmBTGQUkbM`;
-        
+        const url = `https://www.youtube.com/watch?v=${SearthQuery}`;
+        // https://youtu.be/1X7I25-rSqE
         await page.goto(url);
         // wait for the page to load
         await page.waitForTimeout(2000);
@@ -60,6 +61,8 @@ export  async function scrapeFunction2(searchTerm : string) {
         }
         );
         console.log(comments);
+
+
     
 
  } 
