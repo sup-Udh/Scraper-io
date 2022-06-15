@@ -1,5 +1,6 @@
 import { waitForDebugger } from "inspector";
-
+const process = require("process");
+const rdl = require("readline");
 const puppeteer = require('puppeteer');
 export  async function scrapeFunction2(searchTerm : string, SearthQuery : string) { // searchTetrm => Site , Search => Query
     if(searchTerm === 'youtube'){
@@ -33,16 +34,14 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
                     clearInterval(timer);
                     resolve();
                   }
-                }, 100);
+                }, 10);
               });
             });
           }
-          
+
         await autoScroll(page);
         await page.waitForTimeout(2000);
-
-        // console log the render time it took to give the resultsw
-
+    
         const CommentCount = await page.evaluate(() => {
 
             const comments = Array.from(document.querySelectorAll('#comments .style-scope yt-formatted-string')).map(comment => comment.textContent);
