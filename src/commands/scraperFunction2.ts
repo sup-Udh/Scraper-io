@@ -42,6 +42,8 @@ export  async function scrapeFunction2(searchTerm : string) {
         await autoScroll(page);
         await page.waitForTimeout(2000);
 
+        // console log the render time it took to give the resultsw
+
         const CommentCount = await page.evaluate(() => {
 
             const comments = Array.from(document.querySelectorAll('#comments .style-scope yt-formatted-string')).map(comment => comment.textContent);
