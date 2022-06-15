@@ -37,9 +37,7 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
               });
             });
           }
-
-
-
+          
         await autoScroll(page);
         await page.waitForTimeout(2000);
 
