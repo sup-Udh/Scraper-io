@@ -97,7 +97,7 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
 
         const finalData = {
             title: YoutubeTitle,
-            comments: NumComments,
+            numberofComments: NumComments,
             description: YoutubeDescription,
             duration: duration,
             commentsText: {
