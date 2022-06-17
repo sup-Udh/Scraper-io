@@ -41,8 +41,21 @@ if (options.scrape){
       message: 'Your Search Query'
     }
   ]);
+  if (response.Site === 'quit') {
+    console.log('Exiting...');
+    process.exit();
+  }
+  // if user presses ctrl+c exit
+  process.on('SIGINT', () => {
+    console.log('Exiting...');
+    process.exit();
+  }
+  );
+
   console.log(response);
   scrapeFunction1(response.Site, response.Search);
+  // if the user = quit, exit the program
+
 
 }
 if (options.ds){
