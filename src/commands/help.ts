@@ -5,7 +5,8 @@ let path = require('path');
 let program = require('commander');
 import { scrapeFunction1 } from "./scrapeFunction1";
 import { GoogleSearchResults } from "../externalCmds/googleSearchResults";
-
+import { defaultSites } from "../externalCmds/defaultSites";
+import { terminalhelp } from "../externalCmds/help";
 const { prompt } = require('enquirer');
 
 export async  function help() {
@@ -44,8 +45,13 @@ if (options.scrape){
   scrapeFunction1(response.Site, response.Search);
    
 }
-if (options.ds) console.log('ds');
-if(options.help) console.log("helping");
+if (options.ds){
+  defaultSites();
+
+}
+if(options.help){
+  terminalhelp();
+}
 if(options.google){
   GoogleSearchResults();
 
