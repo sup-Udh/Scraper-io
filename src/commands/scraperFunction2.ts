@@ -77,22 +77,25 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
         }
         );
 
+        const comments = await page.evaluate(() => {   
+          const commentText = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
+      }
+      );
+      
+
         const finalData = {
             title: YoutubeTitle,
             comments: NumComments,
-            description: YoutubeDescription
-
-
+            description: YoutubeDescription,
+            commentsText: {
+                comments
+            }
         }
         console.log(finalData);
 
 
 
-        const comments = await page.evaluate(() => {   
-            const commentText = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
-        }
-        );
-        
+  
 
 
     
