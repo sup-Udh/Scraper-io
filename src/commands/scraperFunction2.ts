@@ -55,10 +55,10 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
         );
 
         const YoutubeTitle = await page.evaluate(() => {
-          const title = document.querySelector('#title');
+          const title = document.querySelector('.style-scope ytd-video-primary-info-renderer');
           if(title){
-              // ignore all the spaces and return the title
-               return title.textContent!.replace(/\s/g, ' ');
+              // if there are /n then use them as spaces
+              return title.textContent!.replace(/\n/g, ' ');
           }else{
               return 'No Title';
           }
@@ -81,7 +81,7 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
             title: YoutubeTitle,
             comments: NumComments,
             description: YoutubeDescription
-            
+
 
         }
         console.log(finalData);
