@@ -43,7 +43,7 @@ if (options.scrape){
   ]);
   console.log(response);
   scrapeFunction1(response.Site, response.Search);
-   
+
 }
 if (options.ds){
   defaultSites();
