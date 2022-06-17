@@ -77,8 +77,20 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
         }
         );
 
+        const duration = await page.evaluate(() => {
+            const duration = document.querySelector('.ytp-time-duration');
+            if(duration){
+                return duration.textContent;
+            }
+            else{
+                return 'No Duration';
+            }
+        }
+        );
+
         const comments = await page.evaluate(() => {   
           const commentText = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
+          return commentText;
       }
       );
       
@@ -87,6 +99,7 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
             title: YoutubeTitle,
             comments: NumComments,
             description: YoutubeDescription,
+            duration: duration,
             commentsText: {
                 comments
             }
