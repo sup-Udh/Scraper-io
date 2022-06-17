@@ -5,8 +5,7 @@ import { scrapeFunction2 } from "./scraperFunction2"
 
 
 export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // searchTetrm => Site , Search => Query
-    // check the url if the url is amazon.com then console.log the url
-    // if the url is not amazon.com then console.log the url
+
     var stringified = JSON.stringify(searchTerm);
     var textified = stringified.toString();
 
@@ -39,39 +38,14 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
             await page.waitForTimeout(2000);
             await page.click('#nav-search-submit-button');
             await page.waitForTimeout(2000);
-           
-            
-
-                // var loading = (function() {
-                //     var h = ['|', '/', '-', '\\'];
-                //     var i = 0;
-                  
-                //     return setInterval(() => {
-                //       i = (i > 3) ? 0 : i;
-                //       console.clear();
-                //       console.log(h[i]);
-                //       i++;
-                //     }, 300);
-                //   })();
-                //     setTimeout(() => {
-                //         clearInterval(loading);
-                //         console.clear();
-                //         // 50 seconds is the time limit for the search
-                //     }, 1000); ;
-     
-                
-
-            
+        
 
         const pages = await page.evaluate(() => {
             const pages = document.querySelectorAll('.a-pagination .a-selected');
             return pages.length ? pages[0].textContent : 1;
 
         });
-        // get the number of pages limit to 5 pages then get the product name and price of each product
 
-        // display loding for 1 minute
-            
 
         for (let i = 1; i <= pages!; i++) {
             await page.goto(`https://www.${searchTerm}.com/s?k=${SearthQuery}&page=${i}`);
@@ -84,21 +58,13 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
                 return Array.from(productPrice).map(product => product.textContent);
                 
             });
-            // till the process is done console.log saying we're getting with animation         
-            // get each product name and price and put them into json keys
-            console.log(productName );
-            // var jsonArray = [];
-            // // for each
-            // for (let i = 0; i < productname.length; i++) {
-            //     let json = {
-            //         productname: productname[i],
-            //         productprice: productprice[i]
-            //     }
-            //     // push the json into the array
-            //     jsonArray.push(json);
-            // }
-            // console.log(jsonArray);
+        
+            var EndResult = {
+                productName: productName,
+                productPrice: productPrice
 
+            }
+            console.log(EndResult);
         }
     
 }
