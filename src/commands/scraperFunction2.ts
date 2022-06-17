@@ -2,6 +2,7 @@ import { waitForDebugger } from "inspector";
 const process = require("process");
 const rdl = require("readline");
 const puppeteer = require('puppeteer');
+import { scraperFunction3 } from "./scraperFunction3";
 export  async function scrapeFunction2(searchTerm : string, SearthQuery : string) { // searchTetrm => Site , Search => Query
     if(searchTerm === 'youtube'){
 
@@ -62,5 +63,9 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
 
     
 
- } 
+ }else{
+  scraperFunction3();
+
+
+ }
 }
