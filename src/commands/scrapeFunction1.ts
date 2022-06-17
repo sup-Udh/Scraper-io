@@ -58,7 +58,8 @@ export function scrapeFunction1(searchTerm : string, SearthQuery : string) { // 
                 return Array.from(productPrice).map(product => product.textContent);
                 
             });
-        
+            // for each prodcut create a new object and push it to the array
+            
             var EndResult = {
                 productName: productName,
                 productPrice: productPrice
