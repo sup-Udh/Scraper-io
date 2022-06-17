@@ -4,6 +4,7 @@ let figlet = require('figlet');
 let path = require('path');
 let program = require('commander');
 import { scrapeFunction1 } from "./scrapeFunction1";
+import { GoogleSearchResults } from "../externalCmds/googleSearchResults";
 
 const { prompt } = require('enquirer');
 
@@ -45,7 +46,10 @@ if (options.scrape){
 }
 if (options.ds) console.log('ds');
 if(options.help) console.log("helping");
-if(options.google) console.log("google");
+if(options.google){
+  GoogleSearchResults();
+
+}
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();

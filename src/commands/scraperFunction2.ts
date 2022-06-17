@@ -42,23 +42,57 @@ export  async function scrapeFunction2(searchTerm : string, SearthQuery : string
 
         await autoScroll(page);
         await page.waitForTimeout(2000);
-    
-        const CommentCount = await page.evaluate(() => {
 
-            const comments = Array.from(document.querySelectorAll('#comments .style-scope yt-formatted-string')).map(comment => comment.textContent);
-            return comments;
+        // #comments .style-scope yt-formatted-string
+        const NumComments = await page.evaluate(() => {
+            const comments = document.querySelector('#comments .style-scope yt-formatted-string');
+            if(comments){
+                return comments.textContent;
+            } else {
+                return 'No Comments';
+            }
         }
         );
-        console.log(CommentCount);
 
-        const comments = await page.evaluate(() => {
-            // don't want array format of the comments
+        const YoutubeTitle = await page.evaluate(() => {
+          const title = document.querySelector('#title');
+          if(title){
+              // ignore all the spaces and return the title
+               return title.textContent!.replace(/\s/g, ' ');
+          }else{
+              return 'No Title';
+          }
+        }
+        );
+        // description id = "description"
+
+        const YoutubeDescription = await page.evaluate(() => {
+            const description = document.querySelector('#description .content');
+            if(description){
+                return description.textContent;
+            }
+            else{
+                return 'No Description';
+            }
+        }
+        );
+
+        const finalData = {
+            title: YoutubeTitle,
+            comments: NumComments,
+            description: YoutubeDescription
             
-            const comments = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
-            return comments;
+
+        }
+        console.log(finalData);
+
+
+
+        const comments = await page.evaluate(() => {   
+            const commentText = Array.from(document.querySelectorAll('#comments #content-text')).map(comment => comment.textContent);
         }
         );
-        console.log(comments);
+        
 
 
     
