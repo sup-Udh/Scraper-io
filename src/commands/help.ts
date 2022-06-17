@@ -18,6 +18,8 @@ program
   .option('-s, --scrape ', 'Scrape Your Website')
   .option('-ds, --Defaultsites', 'Templates we have for you')
   .option('-h, --help', 'Help')
+  .option('-g, --google', 'google')
+
   .parse(process.argv);
 
 const options = program.opts();
@@ -43,6 +45,7 @@ if (options.scrape){
 }
 if (options.ds) console.log('ds');
 if(options.help) console.log("helping");
+if(options.google) console.log("google");
 
 if (!process.argv.slice(2).length) {
   program.outputHelp();
