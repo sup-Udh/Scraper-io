@@ -1,15 +1,15 @@
 {
   "name": "scraper-cli",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Scrape Anything you love! In minutes",
-  "main": "index.js",
+  "main": "./build/main.js",
   "bin": {
     "hello": "./build/main.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "bundle": "npm run build && npm run test",
-    "package": "pkg . --targets node14-linux-x64 --output scraper",
+    "package": "pkg . --targets node14-linux-x64 --output scraper ",
     "build": "npx tsc "
   },
   "pkg": {
@@ -38,6 +38,7 @@
     "commander": "^9.3.0",
     "enquirer": "^2.3.6",
     "figlet": "^1.5.2",
+    "path": "^0.12.7",
     "puppeteer": "^14.4.1",
     "tar": "^6.1.11"
   }
