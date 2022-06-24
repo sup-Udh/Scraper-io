@@ -8,6 +8,13 @@ import { scraperFunction3 } from "./scraperFunction3";
 
 
 export  async function scrapeFunction2(searchTerm ,SearthQuery ) { // searchTetrm => Site , Search => Query
+    let chromiumExecutablePath = (isPkg ?
+        puppeteer.executablePath().replace(
+          /^.*?\/node_modules\/puppeteer\/\.local-chromium/,
+          path.join(path.dirname(process.execPath), 'chromium')
+        ) :
+        puppeteer.executablePath()
+      );
     if(searchTerm === 'youtube'){
 
 
@@ -15,6 +22,7 @@ export  async function scrapeFunction2(searchTerm ,SearthQuery ) { // searchTetr
             headless: false,
             defaultViewport: null,
             args: ['--start-maximized'],
+            executablePath: chromiumExecutablePaths,
 
         });
 

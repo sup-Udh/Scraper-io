@@ -3,7 +3,15 @@ import puppeteer, { BrowserFetcher } from 'puppeteer';
 
 import { scrapeFunction2 } from "./scraperFunction2"
 
+
 export function scrapeFunction1(searchTerm , SearthQuery ) { // searchTetrm => Site , Search => Query
+    let chromiumExecutablePath = (isPkg ?
+        puppeteer.executablePath().replace(
+          /^.*?\/node_modules\/puppeteer\/\.local-chromium/,
+          path.join(path.dirname(process.execPath), 'chromium')
+        ) :
+        puppeteer.executablePath()
+      );
 
     var stringified = JSON.stringify(searchTerm);
     var textified = stringified.toString();
@@ -25,7 +33,7 @@ export function scrapeFunction1(searchTerm , SearthQuery ) { // searchTetrm => S
                 headless: true,
                 defaultViewport: null,
                 args: ['--start-maximized'],
-                executablePath: '../../node_modules/puppeteer/.local-chromium/linux-1002410/chrome-linux/chrome',
+                executablePath: chromiumExecutablePaths,
             });
 
             const page = await browser.newPage();
