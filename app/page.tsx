@@ -42,9 +42,9 @@ export default function Home() {
       
       {/* title  */}
       
-      <div className='flex justify-center '>
+      <div className='flex justify-center underline underline-offset-4 decoration-3'>
       <p className='mt-[2.5rem] font-bold text-[30px]'>
-        Join the <span className='underline ring-offset-1'>beta</span>
+        Join the <span className=''>beta</span>
       </p>
 
       </div>
