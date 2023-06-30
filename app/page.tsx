@@ -5,21 +5,75 @@ export default function Home() {
     <div className='master#0'>
 
       {/* navbar code. */}
-    <div className='navbar'>
-      <div className='navbar'>
+    <div className=''>
+      <div className=''>
 
       </div>
 
 
     </div>
 
-
+    {/* title heading */}
     <div className="flex justify-center text-4xl font-bold mt-[10rem]">
         <h1 className=''>
         <span className='ml-[0.60rem]'>A visual and terminal based </span> <br />
-        <span className='text-[#06B6D4]'>scraper</span> to extract data easily</h1>
+        <span className='text-[#06B6D4]'>scraper</span> to extract data easily
+        </h1>
+    </div>
+
+    {/* center down content */}
+    <div className='flex justify-center mt-[1.25rem] text-gray-400'>
+    <p>
+        Start scraping your sites with ease no more code required<br />
+         <span className='ml-[1.25rem]'>also includes data parsing,api,automation and more!</span>
+
+        </p>
+    </div>
+
+    {/* Buttons content */}
+
+    <div className='flex justify-center mt-[4.25rem]'>
+      <button className='border-[2px] border-[#fff] h-[36px] w-[239px] rounded-md font-light'>Sign Up</button>
+      <button className='border-1 bg-[#3C3E43] h-[36px] w-[239px] rounded-md font-thin ml-[1.25rem]'>Learn More</button>
+    </div>
+
+    {/* div for the waitlist */}
+     <div className=" rounded-lg mt-[400px] w-full h-[20rem] bg-gradient-to-b from-purple-500 to-blue-500">
+      
+      {/* title  */}
+      
+      <div className='flex justify-center '>
+      <p className='mt-[2.5rem] font-bold text-[30px]'>
+        Join the <span className='underline ring-offset-1'>beta</span>
+      </p>
+
+      </div>
+
+
+      
+{/* mini content div */}
+      <div className='flex justify-center mt-[0.25rem]'>
+      <p>
+      The beta version of crawly will soon be out for users. Drop your <br />
+      <span className='ml-[5.25rem]'>Email below we’ll notify you once it’s ready!</span>
+      </p>
+      </div>
+     
+
+        {/* input box */}
+    <div className='flex justify-center '>
+      <input placeholder='email' type='email' required className='text-left px-2 h-[40px] w-[243px] mt-[2.5rem] border-2 bg-[#fff] rounded-md  focus:border-sky-500 focus:ring-sky-500   text-black '/>
+      {/* add a button parallel to the input area  */}
+      <button className='mt-[2.5rem] ml-[1.25rem]'>Join Waitlist</button>
+    </div>
+
 
     </div>
+
+
+ 
+
+
 
     {/* master class div ending */}
     </div>
