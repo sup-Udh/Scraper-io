@@ -33,3 +33,16 @@ body {
   height: 50px;
   flex-shrink: 0;
 }
+.text-animation {
+  opacity: 0;
+  animation: fade-in 2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

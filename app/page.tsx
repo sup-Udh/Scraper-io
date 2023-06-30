@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import arrow from '../public/arrow.png'
+
 export default function Home() {
   return(
     <div className='master#0'>
