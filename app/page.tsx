@@ -1,5 +1,5 @@
 import Image from 'next/image'
-
+import arrow from '../public/arrow.png'
 export default function Home() {
   return(
     <div className='master#0'>
@@ -37,6 +37,19 @@ export default function Home() {
       <button className='border-1 bg-[#3C3E43] h-[36px] w-[239px] rounded-md font-thin ml-[1.25rem]'>Learn More</button>
     </div>
 
+
+{/* animation buttons */}
+    <div className='flex justify-center mt-[3.25rem] animate-bounce'>
+    <Image 
+    src={arrow}
+    height={30}
+    alt='arrow'
+    className='mt-[4.25rem]'
+    />
+
+
+    </div>
+  
     {/* div for the waitlist */}
      <div className=" rounded-lg mt-[400px] w-full h-[20rem] bg-gradient-to-b from-purple-500 to-blue-500">
       
@@ -64,7 +77,7 @@ export default function Home() {
     <div className='flex justify-center '>
       <input placeholder='email' type='email' required className='text-left px-2 h-[40px] w-[243px] mt-[2.5rem] border-2 bg-[#fff] rounded-md  focus:border-sky-500 focus:ring-sky-500   text-black '/>
       {/* add a button parallel to the input area  */}
-      <button className='mt-[2.5rem] ml-[1.25rem]'>Join Waitlist</button>
+      <button className='mt-[2.5rem] ml-[1.25rem] bg-sky-500 rounded-md h-[4opx] w-[100px] text-sm font-medium'>Join Waitlist</button>
     </div>
 
 
