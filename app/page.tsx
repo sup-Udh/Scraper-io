@@ -15,7 +15,7 @@ export default function Home() {
     </div>
 
     {/* title heading */}
-    <div className="flex justify-center text-4xl font-bold mt-[10rem]">
+    <div className="flex justify-center text-4xl font-bold mt-[10rem] text-animation">
         <h1 className=''>
         <span className='ml-[0.60rem]'>A visual and terminal based </span> <br />
         <span className='text-[#06B6D4]'>scraper</span> to extract data easily
