@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import arrow from '../public/arrow.png'
-import axios from 'axios'
 export default function Home() {
 
 
