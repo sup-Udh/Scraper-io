@@ -10,9 +10,9 @@ export default async function handler(req: any, res:any) {
             
         }
         const {db, users} = await connectDB();
-        var exists = await users.findOne({email: email});
+        const exists = await users.findOne({email: email});
         if(exists){
-            res.status(400).json({message: "Email already exists"});
+            res.status(201).json({message: "Email already exists"});
         }else{
             const result = await users.insertOne(data);
             console.log(result);

@@ -7,6 +7,8 @@ export default function Home() {
   const [email , setEmail] = useState('')
   const [hiddensucess , setHiddensucess] = useState(true)
 
+  const [hiddenfail , setHiddenfail] = useState(true)
+
   const sub = async (e:any) => {
     e.preventDefault();
     try{
@@ -14,10 +16,18 @@ export default function Home() {
         email
       })
       if(response.data.message === "User added"){
-        hiddensucess ? setHiddensucess(false) : setHiddensucess(true)
- 
+        // show the alert box for 2 seconds then hide it
+        setHiddensucess(false)
+        setTimeout(() => {
+          setHiddensucess(true)
+        }, 2000);
+
+
       }else{
-        alert("You are already in the waitlist/ You have entered an invalid email")
+        setHiddenfail(false)
+        setTimeout(() => {
+          setHiddenfail(true)
+        }, 2000);
       }
       console.log(response)
     } catch (error) {
@@ -107,8 +117,13 @@ export default function Home() {
     <div id="waitlist">
     {/* div for the waitlist */}
      <div className=" rounded-lg mt-[400px] w-full h-[25rem] bg-gradient-to-b from-purple-500 to-blue-500">
+
+      {/* Danger did not workout! */}
+      <div id="container" className={hiddenfail ? 'hidden': ".hideMe p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"} role="alert">
+  <span className="font-medium">Danger alert!</span> Change a few things up and try submitting again.
+</div>
       {/* alert box || sucess */}
-     <div  className={hiddensucess ? 'hidden' : "p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"} role="alert">
+     <div id="container" className={hiddensucess ? 'hidden' : ".hideMe p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"} role="alert">
   <span className="font-medium">Awesome your added!!</span> We'll Soon let you know once we're done  Cooking!! 🎉🎉
 </div>
       
