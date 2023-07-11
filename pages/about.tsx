@@ -3,6 +3,8 @@ export default function About() {
         // create a div that animates for 30 seconds
         
         <div id="main" className="text-animation">
+            <title>crawly || about
+            </title>
 
 
         <div className="flex justify-left">
