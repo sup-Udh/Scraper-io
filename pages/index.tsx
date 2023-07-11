@@ -1,6 +1,28 @@
 import Image from 'next/image'
 import arrow from '../public/arrow.png'
+import { useState } from 'react'
+import axios from 'axios'
 export default function Home() {
+  const [email , setEmail] = useState('')
+
+  const sub = async (e:any) => {
+    e.preventDefault();
+    try{
+      const response = await axios.post("/api/waitlist", {
+        email
+      })
+      if(response.data.message === "User added"){
+        alert("Added you to the waitlist!")
+      }else{
+        alert("You are already in the waitlist/ You have entered an invalid email")
+      }
+      console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
 
 
   return(
@@ -86,9 +108,9 @@ export default function Home() {
 
         {/* input box */}
     <div className='flex justify-center '>
-      <input placeholder='email' type='email' required className='text-left px-2 h-[40px] w-[243px] mt-[2.5rem] border-2 bg-[#fff] rounded-md  focus:border-sky-500 focus:ring-sky-500   text-black ' />
+      <input placeholder='email' type='email' required className='text-left px-2 h-[40px] w-[243px] mt-[2.5rem] border-2 bg-[#fff] rounded-md  focus:border-sky-500 focus:ring-sky-500   text-black ' value={email} onChange={(e:any) => setEmail(e.target.value) } />
       {/* add a button parallel to the input area  */}
-      <button  className='mt-[2.5rem] ml-[1.25rem] bg-sky-500 rounded-md h-[4opx] w-[100px] text-sm font-medium'>Join Waitlist</button>
+      <button onClick={sub} className='mt-[2.5rem] ml-[1.25rem] bg-sky-500 rounded-md h-[4opx] w-[100px] text-sm font-medium'>Join Waitlist</button>
     </div>
 
     </div>
