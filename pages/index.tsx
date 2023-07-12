@@ -4,6 +4,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import github from '../public/git.png'
 import Link from 'next/link'
+import { Meta } from '../components/partials/Meta'
 export default function Home() {
   const [email , setEmail] = useState('')
   const [hiddensucess , setHiddensucess] = useState(true)
@@ -40,6 +41,8 @@ export default function Home() {
 
 
   return(
+    <>
+    <Meta title="cralwy || home" description="cralwy is a web scraping tool that helps you scrape data from any website." author="Udhay" />
     
     <div className='master#0'>
 
@@ -167,6 +170,7 @@ export default function Home() {
 
     {/* master class div ending */}
     </div>
+    </>
 
   )
 
