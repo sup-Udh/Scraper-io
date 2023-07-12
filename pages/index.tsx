@@ -3,6 +3,7 @@ import arrow from '../public/arrow.png'
 import { useState } from 'react'
 import axios from 'axios'
 import github from '../public/git.png'
+import Link from 'next/link'
 export default function Home() {
   const [email , setEmail] = useState('')
   const [hiddensucess , setHiddensucess] = useState(true)
@@ -73,14 +74,14 @@ export default function Home() {
     </div>
     {/* GITHUB || ICON */}
     <div className='flex justify-center md-[-2.5rem]'>
-      <a href='https://github.com/sup-Udh/Scraper-io'>
+      <Link href="https://github.com/sup-Udh/Scraper-io">
       <Image 
       src={github}
       height={30}
       alt='github'
       className='mt-[1.25rem]'
       />
-      </a>
+      </Link>
     
       
     </div>
@@ -89,9 +90,9 @@ export default function Home() {
 
     <div className='flex justify-center mt-[4.25rem]'>
       <button className='border-[2px] border-[#fff] h-[36px] w-[239px] rounded-md font-light'>
-        <a href="#waitlist">Sign Up</a>
+        Sign Up
         </button>
-      <button className='border-1 bg-[#3C3E43] h-[36px] w-[239px] rounded-md font-thin ml-[1.25rem]'><a href='/about'>Learn More</a></button>
+      <button className='border-1 bg-[#3C3E43] h-[36px] w-[239px] rounded-md font-thin ml-[1.25rem]'><Link href="/about">About</Link></button>
     </div>
 
  
@@ -101,14 +102,14 @@ export default function Home() {
     <div className='flex justify-center mt-[3.25rem] animate-bounce'>
      
       <button>
-        <a href="#waitlist">
+        <Link href="#waitlist">
     <Image 
     src={arrow}
     height={30}
     alt='arrow'
     className='mt-[4.25rem]'
     />
-    </a>
+</Link>
     </button>
 
 
@@ -124,7 +125,7 @@ export default function Home() {
 </div>
       {/* alert box || sucess */}
      <div id="container" className={hiddensucess ? 'hidden' : ".hideMe p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"} role="alert">
-  <span className="font-medium">Awesome your added!!</span> We'll Soon let you know once we're done  Cooking!! 🎉🎉
+  <span className="font-medium">Awesome your added!!</span> We&apos;ll Soon let you know once we&apos;re done  Cooking!! 🎉🎉
 </div>
       
       {/* title  */}
@@ -142,7 +143,7 @@ export default function Home() {
       <div className='flex justify-center mt-[0.25rem]'>
       <p>
       The beta version of crawly will soon be out for users. Drop your <br />
-      <span className='ml-[5.25rem]'>Email below we’ll notify you once it’s ready!</span>
+      <span className='ml-[5.25rem]'>Email below we&apos;ll notify you once it&apos;s ready!</span>
       </p>
       </div>
      
