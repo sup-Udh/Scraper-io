@@ -71,7 +71,9 @@ export default function Home() {
       </div>
       {/* create div on the most left corner  */}
       <div className='flex item-left'>
+      <Link href='https://github.com/sup-Udh/Scraper-io'>
         <Image src={github} alt="github" width={30} height={30} />
+        </Link>
       </div>
     
         </nav>
