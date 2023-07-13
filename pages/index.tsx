@@ -63,6 +63,21 @@ export default function Home() {
 </div>
 
 
+{/* navabr */}
+<div>
+  <nav className="flex items-center justify-between flex-wrap  p-6">
+    <div className="flex items-center flex-shrink-0 text-[#4F75FF] mr-6">
+      <span className="font-semibold text-xl tracking-tight">crawly</span>
+      </div>
+      {/* create div on the most left corner  */}
+      <div className='flex item-left'>
+        <Image src={github} alt="github" width={30} height={30} />
+      </div>
+    
+        </nav>
+</div>
+
+
 
 
     {/* title heading */}
