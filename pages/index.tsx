@@ -111,7 +111,7 @@ export default function Home() {
       <div className='flex justify-center mt-[1.25rem]'>
 
       <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}
-     className='sm:  absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
+     className='bg-black absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
      <div className='absolute ml-[20rem] mt-[0.3rem] font-bold'>
      <button onClick={sub}className='  h-[45px] w-[198px] bg-[#4F75FF] rounded-3xl text-black font-bold'>Join the wailist</button>
 
