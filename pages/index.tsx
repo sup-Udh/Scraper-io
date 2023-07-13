@@ -56,6 +56,7 @@ export default function Home() {
 
       </div>
 
+  
 
     </div>
 
@@ -63,7 +64,7 @@ export default function Home() {
     <div className="flex justify-center text-4xl font-bold mt-[10rem] text-animation">
         <h1 className=''>
         <span className='ml-[0.60rem]'>A visual and terminal based </span> <br />
-        <span className='text-[#06B6D4]'>scraper</span> to extract data easily
+        <span className='text-[#3562FF]'>scraper</span> to extract data easily
         </h1>
     </div>
 
@@ -81,15 +82,26 @@ export default function Home() {
  
 
 
-{/* animation buttons */}
 
 
     <div id="waitlist">
 
+      <div className='flex justify-center mt-[1.25rem]'>
+
+      <input type="text" placeholder="Enter your email"
+     className=' absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
+     <div className='absolute ml-[20rem] mt-[0.3rem] font-bold'>
+     <button className='  h-[45px] w-[198px] bg-[#4F75FF] rounded-3xl text-black font-bold'>Join the wailist</button>
+
+     </div>
 
 
+      </div>
+ 
+    
 
-      {/* Danger did not workout! */}
+
+    {/* Danger did not workout! */}
       <div id="container" className={hiddenfail ? 'hidden': ".hideMe p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"} role="alert">
   <span className="font-medium">You&apos;ve already been added</span> Change a few things up and try submitting again.
 </div>
@@ -97,16 +109,7 @@ export default function Home() {
      <div id="container" className={hiddensucess ? 'hidden' : ".hideMe p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"} role="alert">
   <span className="font-medium">Awesome your added!!</span> We&apos;ll Soon let you know once we&apos;re done  Cooking!! 🎉🎉
 </div>
-      
-      {/* title  */}
-   
-
-      
-
   
-
-
-
     </div>
 
 
