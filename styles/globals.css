@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+@layer base {
+  html {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

@@ -75,52 +75,19 @@ export default function Home() {
 
         </p>
     </div>
-    {/* GITHUB || ICON */}
-    <div className='flex justify-center md-[-2.5rem]'>
-      <Link href="https://github.com/sup-Udh/Scraper-io">
-      <Image 
-      src={github}
-      height={30}
-      alt='github'
-      className='mt-[1.25rem]'
-      />
-      </Link>
     
-      
-    </div>
 
-    {/* Buttons content */}
-
-    <div className='flex justify-center mt-[4.25rem]'>
-      <button className='border-[2px] border-[#fff] h-[36px] w-[239px] rounded-md font-light'>
-        Sign Up
-        </button>
-      <button className='border-1 bg-[#3C3E43] h-[36px] w-[239px] rounded-md font-thin ml-[1.25rem]'><Link href="/about">About</Link></button>
-    </div>
-
+  
  
 
 
 {/* animation buttons */}
-    <div className='flex justify-center mt-[3.25rem] animate-bounce'>
-     
-      <button>
-        <Link href="#waitlist">
-    <Image 
-    src={arrow}
-    height={30}
-    alt='arrow'
-    className='mt-[4.25rem]'
-    />
-</Link>
-    </button>
 
-
-    </div>
 
     <div id="waitlist">
-    {/* div for the waitlist */}
-     <div className=" rounded-lg mt-[400px] w-full h-[25rem] bg-gradient-to-b from-purple-500 to-blue-500">
+
+
+
 
       {/* Danger did not workout! */}
       <div id="container" className={hiddenfail ? 'hidden': ".hideMe p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"} role="alert">
@@ -132,33 +99,12 @@ export default function Home() {
 </div>
       
       {/* title  */}
-      
-      <div className='flex justify-center underline underline-offset-4 decoration-3'>
-      <p className='mt-[2.5rem] font-bold text-[30px]'>
-        Join the <span className=''>beta</span>
-      </p>
-
-      </div>
-
+   
 
       
-{/* mini content div */}
-      <div className='flex justify-center mt-[0.25rem]'>
-      <p>
-      The beta version of crawly will soon be out for users. Drop your <br />
-      <span className='ml-[5.25rem]'>Email below we&apos;ll notify you once it&apos;s ready!</span>
-      </p>
-      </div>
-     
 
-        {/* input box */}
-    <div className='flex justify-center '>
-      <input placeholder='email' type='email' required className='text-left px-2 h-[40px] w-[243px] mt-[2.5rem] border-2 bg-[#fff] rounded-md  focus:border-sky-500 focus:ring-sky-500   text-black ' value={email} onChange={(e:any) => setEmail(e.target.value) } />
-      {/* add a button parallel to the input area  */}
-      <button onClick={sub} className='mt-[2.5rem] ml-[1.25rem] bg-sky-500 rounded-md h-[4opx] w-[100px] text-sm font-medium'>Join Waitlist</button>
-    </div>
+  
 
-    </div>
 
 
     </div>
