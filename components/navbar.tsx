@@ -2,7 +2,7 @@ export default function Navbar(){
   return(
     <div className="flex flex-row min-h-screen bg-gray-100 text-gray-800">
     <aside
-      className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-indigo-500"
+      className="sidebar w-64 md:shadow transform -translate-x-full md:translate-x-0 transition-transform duration-150 ease-in bg-gray-700"
     >
       <div className="sidebar-header flex items-center justify-center py-4">
         <div className="inline-flex">
@@ -151,7 +151,7 @@ export default function Navbar(){
                 <svg
                   fill="none"
                   stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
                   stroke-width="2"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
