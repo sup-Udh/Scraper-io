@@ -17,7 +17,7 @@ export default function dashboard(){
       </div>
 
       {/* Dashboard */}
-      <div className="w-4/5 h-screen bg-gray-900">
+      <div className="w-5/6 h-screen bg-gray-900">
 
         {/* User welcome  */}
         <div className="bg-gray-700 bg-opacity-80 p-4 w-[25.5rem] h-[5rem] ml-[2.5rem] mt-[2.5rem] rounded-md">

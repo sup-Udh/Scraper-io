@@ -9,7 +9,8 @@ export default function scraper(){
         e.preventDefault();
         try{
             const response = await axios.post("http://localhost:3001/api/userData", {
-                url
+                url,
+                elements
             })
             console.log(response)
         }catch(error){
@@ -26,7 +27,7 @@ export default function scraper(){
             <button onClick={datasend}>submit</button>
 
             <h2>elements to be scraped</h2>
-            <input type="text" placeholder="Enter elements" />
+            <input value={elements} onChange={(e) => setElements(e.target.value)} type="text" placeholder="Enter elements" />
             
         </div>
         </>
