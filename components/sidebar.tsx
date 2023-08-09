@@ -17,16 +17,45 @@ export default function Sidebar(){
         <span className='sidebar-icon group'>
         <SideBarIcon icon={<FaFire size="28" /> } />
         <span className='sidebar-tooltip group-hover:scale-100'>
-            tool tip 
+            tool tip 1
+          </span>
+
+        </span>
+        <span className='sidebar-icon group'>
+        <SideBarIcon icon={<BsPlus size="32" />} />
+        <span className='sidebar-tooltip group-hover:scale-100'>
+            tool tip2 
+          </span>
+
+
+        </span>
+
+        <span className='sidebar-icon group'>
+        <SideBarIcon icon={<BsFillLightningFill size="20" />} />
+
+        <span className='sidebar-tooltip group-hover:scale-100'>
+            tool tip3
+          </span>
+
+
+        </span>
+
+        <span className='sidebar-icon group'>
+        <SideBarIcon icon={<FaPoo size="20" />} />
+
+        <span className='sidebar-tooltip group-hover:scale-100'>
+            tool tip4
           </span>
 
         </span>
 
-        
-        <SideBarIcon icon={<BsPlus size="32" />} />
-        <SideBarIcon icon={<BsFillLightningFill size="20" />} />
-        <SideBarIcon icon={<FaPoo size="20" />} />
+        <span className='sidebar-icon group'>
         <SideBarIcon icon={<BsGearFill size="20" />} />
+        <span className='sidebar-tooltip group-hover:scale-100'>
+            tool tip5
+          </span>
+        </span>
+
         </div>
          </>
     );
