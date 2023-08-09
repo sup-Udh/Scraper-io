@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar"
 import Chart from "./../../components/chart"
+import Link from "next/link"
 export default function dashboard(){
 
 
@@ -21,6 +22,10 @@ export default function dashboard(){
 
             <div className="mt-[2.25rem] bg-[#40414F] bg-opacity-50 w-[30rem] h-16 rounded-lg ">
                 <span className="grid justify-items-start"><div className="mt-[.60rem] mx-4 font-medium text-xl">Welcome udhay!</div></span>
+                <Link href="#">
+                <p className="text-sm text-gray-200 font-medium mx-4 my-1">Sign out</p>
+
+                </Link>
 
             </div>
 
@@ -51,6 +56,9 @@ export default function dashboard(){
             <div className="mt-[2.25rem] bg-[#40414F]  bg-opacity-50 rounded-lg">
 
                 <h1 className="font-medium text-xl mx-4">Usage</h1>
+                <Link href="#">
+                <p className="text-sm mx-4 mt-[-0.25rem] underline underline-offset-1">learn more </p>
+</Link>
 
                 <div>
                     {/* chart */}
