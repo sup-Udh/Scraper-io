@@ -5,8 +5,7 @@ import axios from 'axios'
 import github from '../public/git.png'
 import Link from 'next/link'
 import { Meta } from '../components/partials/Meta'
-import { Analytics } from '@vercel/analytics/react';
-
+import NavbarHome from '@/components/navbarHome'
 export default function Home() {
   const [email , setEmail] = useState('')
   const [hiddensucess , setHiddensucess] = useState(true)
@@ -45,8 +44,9 @@ export default function Home() {
   return(
     <>
     <Meta title="cralwy || home" description="cralwy is a web scraping tool that helps you scrape data from any website." author="Udhay" />
-    
-    <div className='master#0'>
+    <NavbarHome />
+    <body className='bg-[#161E29]'>
+    <div className='master#0 '>
 
       
 
@@ -69,7 +69,7 @@ export default function Home() {
 <div>
   <nav className="flex items-center justify-between flex-wrap  p-6">
     <div className="flex items-center flex-shrink-0 text-[#4F75FF] mr-6">
-      <span className="font-semibold text-xl tracking-tight">crawly</span>
+      <span className="ml-[4.25rem] font-semibold text-xl tracking-tight">crawly</span>
       </div>
       {/* create div on the most left corner  */}
       <div className='flex item-left'>
@@ -110,7 +110,7 @@ export default function Home() {
 
     <div id="waitlist">
 
-      <div className='flex justify-center mt-[1.25rem]'>
+      <div className='flex justify-center mt-[1.25rem] bg-[#161E29]'>
 
       <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}
      className='bg-black absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
@@ -136,8 +136,7 @@ export default function Home() {
 
     {/* master class div ending */}
     </div>
-            <Analytics />
-
+    </body>
     </>
 
   )
