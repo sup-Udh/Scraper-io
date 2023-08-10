@@ -5,6 +5,8 @@ import axios from 'axios'
 import github from '../public/git.png'
 import Link from 'next/link'
 import { Meta } from '../components/partials/Meta'
+import { Analytics } from '@vercel/analytics/react';
+
 export default function Home() {
   const [email , setEmail] = useState('')
   const [hiddensucess , setHiddensucess] = useState(true)
@@ -134,6 +136,8 @@ export default function Home() {
 
     {/* master class div ending */}
     </div>
+            <Analytics />
+
     </>
 
   )

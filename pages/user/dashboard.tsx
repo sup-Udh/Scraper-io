@@ -27,8 +27,30 @@ export default function dashboard(){
 
                 </Link>
 
+         
+
+
             </div>
 
+                       {/* api docs  */}
+                       <div className="lg:flex hidden">
+                       <div className="flex-shrink-0 grid justify-items-center mt-[-4rem] ml-[35.25rem] bg-[#40414F] bg-opacity-50 w-[30rem] h-16 rounded-lg ">
+                        <div className="flex-shrink-0">
+                            <span className="static font-light text-gray-200 ">
+                                <div className="my-5 mr-[15.25rem]">
+                                    API 
+                                    <div className=" font-light text-gray-200 ml-[5rem] mt-[-1.50rem]">
+                                        Documentation
+                                    </div>
+                            </div>
+                            </span>
+                        </div>
+                        
+                      
+
+                        </div>
+                       </div>
+        
             {/* parent flex */}
             <div className="flex">
 

@@ -18,14 +18,14 @@ export default function Sidebar(){
         <span className='sidebar-icon group'>
         <SideBarIcon icon={<AiFillHome size="28" /> } />
         <span className='sidebar-tooltip group-hover:scale-100'>
-            tool tip 1
+            Home
           </span>
 
         </span>
         <span className='sidebar-icon group'>
         <SideBarIcon icon={<BsPlus size="32" />} />
         <span className='sidebar-tooltip group-hover:scale-100'>
-            tool tip2 
+          New Scraper
           </span>
 
 
@@ -35,7 +35,7 @@ export default function Sidebar(){
         <SideBarIcon icon={<BsFillLightningFill size="20" />} />
 
         <span className='sidebar-tooltip group-hover:scale-100'>
-            tool tip3
+            Active scrapers
           </span>
 
 
@@ -45,7 +45,7 @@ export default function Sidebar(){
         <SideBarIcon icon={<AiFillInfoCircle size="20" />} />
 
         <span className='sidebar-tooltip group-hover:scale-100'>
-            tool tip4
+          Documentation
           </span>
 
         </span>
@@ -53,7 +53,7 @@ export default function Sidebar(){
         <span className='sidebar-icon group'>
         <SideBarIcon icon={<BsGearFill size="20" />} />
         <span className='sidebar-tooltip group-hover:scale-100'>
-            tool tip5
+            Settings
           </span>
         </span>
 
