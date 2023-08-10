@@ -7,6 +7,7 @@
 @layer base {
   html {
     font-family: 'Poppins', sans-serif
+
     ;
   }
 }
@@ -27,6 +28,7 @@
 }
 
 body {
+backgorund: 
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
