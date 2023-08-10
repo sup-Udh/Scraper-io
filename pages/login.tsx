@@ -20,7 +20,7 @@ export default function login(){
                 <h3 className="underline text-gray-400 mt-[0.25rem] " >Forgot your password?</h3>
             </div>
             <div className="flex justify-center">
-                <h3 className="underline text-gray-400 mt-[0.25rem]">Don't have an account? Sign up</h3>
+                <h3 className="underline text-gray-400 mt-[0.25rem]">Don&apos;t have an account? Sign up</h3>
 
             </div>
         </>
