@@ -142,12 +142,12 @@ export default function Home() {
         </div>
 
         <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
-          "Our product is a groundbreaking 
+          Our product is a groundbreaking 
           solution that simplifies data 
           extraction through a no-code platform, 
           making it accessible to users without coding expertise.
            It empowers businesses to collect and analyze data effortlessly,
-            unlocking valuable insights for informed decision-making."
+            unlocking valuable insights for informed decision-making.
 
 
         </div>
@@ -172,8 +172,12 @@ export default function Home() {
       </div>
 
       <br />
-      
-         
+
+      {/* feature section 2.0 */}
+
+      <div>
+
+        </div>   
 
 
 
