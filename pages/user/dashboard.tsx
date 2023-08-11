@@ -33,7 +33,7 @@ export default function dashboard(){
             </div>
 
                        {/* api docs  */}
-                       <div className="lg:flex hidden">
+                       {/* <div className="lg:flex hidden">
                        <div className="flex-shrink-0 grid justify-items-center mt-[-4rem] ml-[35.25rem] bg-[#40414F] bg-opacity-50 w-[30rem] h-16 rounded-lg ">
                         <div className="flex-shrink-0">
                             <span className="static font-light text-gray-200 ">
@@ -50,7 +50,7 @@ export default function dashboard(){
 
                         </div>
                        </div>
-        
+         */}
             {/* parent flex */}
             <div className="flex">
 
