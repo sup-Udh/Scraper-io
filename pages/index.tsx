@@ -6,6 +6,7 @@ import github from '../public/git.png'
 import Link from 'next/link'
 import { Meta } from '../components/partials/Meta'
 import NavbarHome from '@/components/navbarHome'
+import vector from "../public/vector.png"
 export default function Home() {
   const [email , setEmail] = useState('')
   const [hiddensucess , setHiddensucess] = useState(true)
@@ -45,7 +46,6 @@ export default function Home() {
     <>
     <Meta title="cralwy || home" description="cralwy is a web scraping tool that helps you scrape data from any website." author="Udhay" />
     <NavbarHome />
-    <body className='bg-[#161E29]'>
     <div className='master#0 '>
 
       
@@ -108,12 +108,12 @@ export default function Home() {
 
 
 
-    <div id="waitlist">
+    <div id="waitlist bg-[#121B29]">
 
-      <div className='flex justify-center mt-[1.25rem] bg-[#161E29]'>
+      <div className='flex justify-center mt-[1.25rem]'>
 
       <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}
-     className='bg-black absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
+     className='bg-[#121B29] absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
      <div className='absolute ml-[20rem] mt-[0.3rem] font-bold'>
      <button onClick={sub}className='  h-[45px] w-[198px] bg-[#4F75FF] rounded-3xl text-black font-bold'>Join the wailist</button>
 
@@ -121,22 +121,64 @@ export default function Home() {
 
 
       </div>
- 
-    
 
-
-
-  
     </div>
+    {/* arrow */}
+    <div className='mt-[7.25rem] flex justify-center'>
+      <Image 
+      src={vector}
+      alt="vector"
+      />
+      </div>
 
 
- 
+      {/* feature section */}
+      <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1'>
+
+        {/* 01  */}
+      <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
+        <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
+        No code
+        </div>
+
+        <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
+          "Our product is a groundbreaking 
+          solution that simplifies data 
+          extraction through a no-code platform, 
+          making it accessible to users without coding expertise.
+           It empowers businesses to collect and analyze data effortlessly,
+            unlocking valuable insights for informed decision-making."
+
+
+        </div>
+        
+      </div> 
+
+      {/* 02 */}
+      <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
+        <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
+        Integration Flexibility
+        </div>
+
+           <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
+        Our product is designed to seamlessly integrate with existing data analytics tools, making it a valuable addition to a wide range of industries and sectors
+
+
+        </div>
+
+        </div>
+
+        
+      </div>
+
+      <br />
+      
+         
 
 
 
     {/* master class div ending */}
     </div>
-    </body>
     </>
 
   )
