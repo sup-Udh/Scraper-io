@@ -175,10 +175,52 @@ export default function Home() {
 
       {/* feature section 2.0 */}
 
-      <div>
+      <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1'>
+        {/* 01 */}
 
-        </div>   
+        <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
 
+        <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
+        Automate Your Scraping Tasks Effortlessly
+
+</div>
+
+        <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
+        Our no-code platform empowers you to automate scraping tasks with ease.
+        just set up your scraper and start getting your data in minutes. 
+        Conncet your scraper to your favourite tools and automate your scraping tasks.
+
+
+        </div>
+
+        
+
+
+        
+        
+      </div> 
+              {/* 02 */}
+
+      <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
+
+          <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
+          Easy Proxy Roatation
+          </div>
+
+          <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
+            Stop getting blocked by websites your trying to scrape.
+            Our product comes with a built in proxy rotator that rotates your proxies automatically.
+            You can also add your own proxies to the rotator and use them for scraping.
+
+
+          </div>
+          </div>
+
+
+        </div>  
+
+        <div className='flex justify-center font-semibold text-[36px] mt-[5.25rem]'>
+        </div>
 
 
     {/* master class div ending */}
