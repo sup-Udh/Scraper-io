@@ -5,7 +5,6 @@ import axios from 'axios'
 import github from '../public/git.png'
 import Link from 'next/link'
 import { Meta } from '../components/partials/Meta'
-import NavbarHome from '@/components/navbarHome'
 import vector from "../public/vector.png"
 export default function Home() {
   const [email , setEmail] = useState('')
@@ -24,14 +23,14 @@ export default function Home() {
         setHiddensucess(false)
         setTimeout(() => {
           setHiddensucess(true)
-        }, 2000);
+        }, 5000);
 
 
       }else{
         setHiddenfail(false)
         setTimeout(() => {
           setHiddenfail(true)
-        }, 2000);
+        }, 5000);
       }
       console.log(response)
     } catch (error) {
@@ -45,7 +44,6 @@ export default function Home() {
   return(
     <>
     <Meta title="cralwy || home" description="cralwy is a web scraping tool that helps you scrape data from any website." author="Udhay" />
-    <NavbarHome />
     <div className='master#0 '>
 
       
