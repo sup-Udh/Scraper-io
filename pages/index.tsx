@@ -173,7 +173,7 @@ export default function Home() {
 
       {/* feature section 2.0 */}
 
-      <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1'>
+      <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1'>
         {/* 01 */}
 
         <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>

@@ -1,6 +1,7 @@
 import { BsPlus, BsFillLightningFill, BsGearFill , } from 'react-icons/bs';
 import { AiFillHome, AiFillInfoCircle } from "react-icons/ai";
 import { FaFire, FaPoo } from 'react-icons/fa';
+import Link from 'next/link';
 export default function Sidebar(){
     const SideBarIcon = ({ icon } : {icon: any}) => (
         <div className="sidebar-icon group">
@@ -22,8 +23,12 @@ export default function Sidebar(){
           </span>
 
         </span>
+        
         <span className='sidebar-icon group'>
-        <SideBarIcon icon={<BsPlus size="32" />} />
+          <Link href="/user/newscraper">
+          <SideBarIcon icon={<BsPlus size="32" />} />
+
+          </Link>
         <span className='sidebar-tooltip group-hover:scale-100'>
           New Scraper
           </span>
