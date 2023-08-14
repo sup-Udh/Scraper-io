@@ -66,9 +66,9 @@ export default function Home() {
 
       <div className='mt-[1.25rem]'>
       <span className='text-gray-300 font-normal text-gray/50'>
-        We'll Soon be launching our beta version of crawly for all the users keep in mind that the beta version <br />
+        We&apos;ll Soon be launching our beta version of crawly for all the users keep in mind that the beta version <br />
         will be free for all the users hence not all the features will be available in the beta version. but we <br />
-        we'd love for you to join us on our journey to make web scraping easy for everyone.
+        we&apos;d love for you to join us on our journey to make web scraping easy for everyone.
       </span>
       </div>
 
