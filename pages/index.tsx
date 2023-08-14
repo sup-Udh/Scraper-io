@@ -73,7 +73,9 @@ export default function Home() {
       </div>
 
       <div className='mt-[1.25rem] '>
+        <Link href="https://discord.gg/W9mmBVQ3">
         <button className='border border-white rounded-md w-[10rem] h-[2rem] '>join community</button>
+        </Link>
 
       </div>
       </div>
