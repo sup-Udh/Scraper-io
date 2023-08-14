@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar"
 import { BiCalendar } from "react-icons/bi"
 import { BiSolidBolt } from "react-icons/bi"
+import { BiNetworkChart } from "react-icons/bi"
 export default function NewScraper(){
     return(
         <>
@@ -13,34 +14,35 @@ export default function NewScraper(){
 
         <br />
         {/* scraper div */}
-        <div className="bg-[#40414F] bg-opacity-50  w-[1129px] h-[651px] mx-[10rem] md:w-[564px] lg:w-[1129px] sm:w-[282px] rounded-md">
+        <div className="bg-[#40414F] bg-opacity-50  w-[1129px] h-[651px] mx-[10rem] md:w-[564px] lg:w-[1129px]  rounded-md">
             {/* mini navabar for the div */}
 
             <div>
-                <nav className=" h-[3.60rem]  border-b-2 border-gray-500 rounded-md shadow-lg">
-                    <div className="grid grid-cols-4 lg:gird-cols-8 md:gird-cols-2 sm:gird-cols-4">
-                        <span className="m-1 ml-[0.25rem] font-semibold font-['Inter']  hover:bg-gray-700 h-[50px] w-[70px] rounded-md ">
-                            <p className="flex justify-center mt-[0.90rem] text-white ">
-                                <div>
-                                    <BiSolidBolt size="21" />
-                                </div>
-                                Scraper
-                                </p>
-                        </span>
-
-                        <span className="m-1 font-semibold font-['Inter']  hover:bg-gray-700 h-[50px] w-[70px] rounded-md ">
-                            <p className="flex justify-center mt-[0.90rem] text-white">
-                                <div>
-                                    <BiCalendar size="21" />
-                                </div>
-                                Schedule
-                                </p>
-
-                        </span>
-
-
-                    </div>
-                </nav>
+            <nav className="bg-gray-800 p-4">
+      <div className="flex items-center justify-between">
+        <div className="flex space-x-4">
+          <a href="#" className="flex items-center text-white font-semibold text-lg">
+           <BiSolidBolt className="h-6 w-6 mr-[0.25rem]" />
+            Home
+          </a>
+          <a href="#" className="flex items-center text-white font-semibold text-lg">
+            <BiCalendar className="h-6 w-6 mr-[0.25rem]" />
+            Schedule
+          </a>
+          <a href="#" className="flex items-center text-white font-semibold text-lg">
+            <BiNetworkChart className="h-6 w-6 mr-[0.25rem]" />
+            Proxy
+          </a>
+          <a href="#" className="flex items-center text-white font-semibold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+            </svg>
+            Contact
+          </a>
+        </div>
+       
+      </div>
+    </nav>
             </div>
         </div>
 

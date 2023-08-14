@@ -45,184 +45,40 @@ export default function Home() {
     <>
     <Meta title="cralwy || home" description="cralwy is a web scraping tool that helps you scrape data from any website." author="Udhay" />
     <div className='master#0 '>
-
-      
-
-
-
       <title>cralwy || home</title>
 
-      {/* navbar code. */}
-        {/* Danger did not workout! */}
-        <div id="container" className={hiddenfail ? 'hidden': ".hideMe p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"} role="alert">
-  <span className="font-medium">You&apos;ve already been added</span> Change a few things up and try submitting again.
-</div>
-      {/* alert box || sucess */}
-     <div id="container" className={hiddensucess ? 'hidden' : ".hideMe p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400"} role="alert">
-  <span className="font-medium">Awesome your added!!</span> We&apos;ll Soon let you know once we&apos;re done  Cooking!! 🎉🎉
-</div>
-
-
-{/* navabr */}
-<div>
-  <nav className="flex items-center justify-between flex-wrap  p-6">
-    <div className="flex items-center flex-shrink-0 text-[#4F75FF] mr-6">
-      <span className="ml-[4.25rem] font-semibold text-xl tracking-tight">crawly</span>
-      </div>
-      {/* create div on the most left corner  */}
-      <div className='flex item-left'>
-      <Link href='https://github.com/sup-Udh/Scraper-io'>
-        <Image src={github} alt="github" width={30} height={30} />
-        </Link>
-      </div>
-    
-        </nav>
-</div>
-
-
-
-
-    {/* title heading */}
-    <div className="flex justify-center text-4xl font-bold mt-[10rem] text-animation">
-        <h1 className=''>
-        <span className='ml-[0.60rem]'>A visual and terminal based </span> <br />
-        <span className='text-[#3562FF]'>scraper</span> to extract data easily
-        </h1>
-    </div>
-
-    {/* center down content */}
-    <div className='flex justify-center mt-[1.25rem] text-gray-400 text-animation'>
-    <p>
-        Start scraping your sites with ease no more code required<br />
-         <span className='ml-[1.25rem]'>also includes data parsing,api,automation and more!</span>
-
-        </p>
-    </div>
-    
-
-  
- 
-
-
-
-
-    <div id="waitlist bg-[#121B29]">
-
-      <div className='flex justify-center mt-[1.25rem]'>
-
-      <input type="text" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)}
-     className='bg-[#121B29] absolute h-[55px] w-[527px] border border-[#818181] rounded-3xl pl-4 ' />
-     <div className='absolute ml-[20rem] mt-[0.3rem] font-bold'>
-     <button onClick={sub}className='  h-[45px] w-[198px] bg-[#4F75FF] rounded-3xl text-black font-bold'>Join the wailist</button>
-
-     </div>
-
-
-      </div>
-
-    </div>
-    {/* arrow */}
-    <div className='mt-[7.25rem] flex justify-center'>
-      <Image 
-      src={vector}
-      alt="vector"
-      />
-      </div>
-
-
-      {/* feature section */}
-      <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1'>
-
-        {/* 01  */}
-      <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
-        <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
-        No code
-        </div>
-
-        <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
-          Our product is a groundbreaking 
-          solution that simplifies data 
-          extraction through a no-code platform, 
-          making it accessible to users without coding expertise.
-           It empowers businesses to collect and analyze data effortlessly,
-            unlocking valuable insights for informed decision-making.
-
-
-        </div>
-        
-      </div> 
-
-      {/* 02 */}
-      <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
-        <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
-        Integration Flexibility
-        </div>
-
-           <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
-        Our product is designed to seamlessly integrate with existing data analytics tools, making it a valuable addition to a wide range of industries and sectors
-
-
-        </div>
-
-        </div>
-
-        
-      </div>
-
+      <h1 className='m-[5rem]  pt-[2.25rem] pl-[6.25rem] font-["__switzer_93f603,__switzer_Fallback_93f603"] text-2xl  '>Simplifying Data Extractions</h1>
       <br />
-
-      {/* feature section 2.0 */}
-
-      <div className='grid grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1'>
-        {/* 01 */}
-
-        <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
-
-        <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
-        Automate Your Scraping Tasks Effortlessly
-
-</div>
-
-        <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
-        Our no-code platform empowers you to automate scraping tasks with ease.
-        just set up your scraper and start getting your data in minutes. 
-        Conncet your scraper to your favourite tools and automate your scraping tasks.
+      <div className='mt-[-5.25rem] ml-[11.25rem] space-y-6 '>
+      <span className='text-gray-300 font-normal text-gray/50'>
+      Discover a game-changing solution that redefines data extraction. Our innovative platform empowers<br />
+       users with a no-code approach, simplifying the process and making it accessible to all. With an intuitive <br />
+        visual interface, you can effortlessly create customized workflows <br />
+      </span>
+      <div className='mt-[1.25rem]'>
+      <span className='text-gray-300 font-normal text-gray/50'>
+      effortlessly gather, analyze, and utilize data insights. Stay tuned for the launch and be among, crawly <br />
+      is rethinking the way data scraping is done. We want everyone to enjoy a powerful no-code based scraper <br />
+      that is easy to use and accessible to all.
+      </span>
+      </div>
 
 
-        </div>
+      <div className='mt-[1.25rem]'>
+      <span className='text-gray-300 font-normal text-gray/50'>
+        We'll Soon be launching our beta version of crawly for all the users keep in mind that the beta version <br />
+        will be free for all the users hence not all the features will be available in the beta version. but we <br />
+        we'd love for you to join us on our journey to make web scraping easy for everyone.
+      </span>
+      </div>
 
-        
+      <div className='mt-[1.25rem] '>
+        <button className='border border-white rounded-md w-[10rem] h-[2rem] '>join community</button>
 
-
-        
-        
-      </div> 
-              {/* 02 */}
-
-      <div className='mt-[7.25rem] mx-[10rem] border border-[#808080] w-[448px] h-[381px] bg-[]'>
-
-          <div className='mt-[2.2rem] mx-8 font-semibold text-[36px]'>
-          Easy Proxy Roatation
-          </div>
-
-          <div className='mt-[2.25rem] mx-8 font-light text-[16px]'>
-            Stop getting blocked by websites your trying to scrape.
-            Our product comes with a built in proxy rotator that rotates your proxies automatically.
-            You can also add your own proxies to the rotator and use them for scraping.
-
-
-          </div>
-          </div>
-
-
-        </div>  
-
-        <div className='flex justify-center font-semibold text-[36px] mt-[5.25rem]'>
-        </div>
-
-
-    {/* master class div ending */}
-    </div>
+      </div>
+      </div>
+ 
+      </div>
     </>
 
   )
