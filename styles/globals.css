@@ -86,9 +86,9 @@ body {
 @layer components {
   .sidebar-icon{
     @apply relative flex items-center justify-center
-          h-12 w-12 mt-2 mb-2 mx-auto shadow-lg bg-gray-800
+          h-12 w-12 mt-2 mb-2 mx-auto shadow-lg 
            text-blue-200
-          hover:bg-blue-800 hover:text-white rounded-3xl hover:rounded-xl
+           hover:text-white rounded-3xl hover:rounded-xl
           transition-all duration-300 ease-linear cursor-pointer;
 
 

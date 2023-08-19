@@ -5,9 +5,13 @@ export default async function handler(req: any, res:any) {
         const email = req.body.email;
         const data = {email: email};
 
-        if(!email){
-            res.status(400).json({message: "Invalid email address"});
+        // if(!email){
+        //     res.status(400).json({message: "Invalid email address"});
             
+        // }
+
+        if(!email){
+            res.status(400).json({message:"Invalid email address please try again"});
         }
         const {db, users} = await connectDB();
         const exists = await users.findOne({email: email});
