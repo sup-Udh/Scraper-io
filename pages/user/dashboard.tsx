@@ -15,7 +15,7 @@ export default function Dashboard(){
             {/* Main Heading */}
             <h1 className="mt-[4.25rem] text-3xl font-light">Welcome udhay!</h1>
 
-            <h2 className="mt-[3.25rem] text-2xl font-bold">Active Scrapers</h2>
+            <h2 className="mt-[3.25rem] text-2xl font-light">Active Scrapers</h2>
 
             {/* active scrapers (PARENT) */}
                             {/* Only display 3 scraoers max */}
@@ -85,6 +85,56 @@ export default function Dashboard(){
 
                 </div>
 
+
+
+            </div>
+
+
+            {/* Usage */}
+
+            <div className="">
+                <h2 className="mt-[3.25rem] text-2xl font-light">Overall Usage</h2>
+                {/* Usage block parents */}
+
+                <div className="mt-[2rem] grid  lg:grid-cols-2 xl:grid-cols-3 sm:space-y-4">
+
+                    {/* 1 */}
+                <div className="bg-[#7F61F4]/50 w-[261px] h-[120px] rounded-md shadow-lg mt-[1.15rem]">
+                    <p className="mx-5 my-5 font-medium text-gray-200">Active scrapers</p>
+
+                    <br />
+                    <p className="mx-5 mt-[-2.25rem] my-5 text-2xl font-medium">0</p>
+                 
+                  
+                </div>
+
+
+                {/* 2 */}
+
+                <div className="bg-[#7F61F4]/50 w-[261px] h-[120px] rounded-md shadow-lg">
+                    <p className="mx-5 my-5 font-medium text-gray-200">Token usage</p>
+
+                    <br />
+                    <p className="mx-5 mt-[-2.25rem] my-5 text-2xl font-medium">0</p>
+                 
+                  
+                </div>
+
+                   {/* 3 */}
+
+                   <div className="bg-[#7F61F4]/50 w-[261px] h-[120px] rounded-md shadow-lg">
+                    <p className="mx-5 my-5 font-medium text-gray-200">API Calls</p>
+
+                    <br />
+                    <p className="mx-5 mt-[-2.25rem] my-5 text-2xl font-medium">0</p>
+                 
+                  
+                </div>
+
+                  
+                   
+
+                </div>
 
 
             </div>
