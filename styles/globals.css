@@ -83,6 +83,11 @@ body {
 .sm\:hidden {
   display: none;
 }
+@layer base{
+  html{
+    font-family: 'Inter', sans-serif;
+  }
+}
 @layer components {
   .sidebar-icon{
     @apply relative flex items-center justify-center
