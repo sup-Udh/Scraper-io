@@ -5,6 +5,7 @@ import Link from "next/link"
 export default function Dashboard(){
     return(
         <>
+        <body>
         {/* sidebar */}
         <div className="flex">
             <SideBar/>
@@ -141,6 +142,8 @@ export default function Dashboard(){
            
 
         </div>
+
+        </body>
 
         
 
