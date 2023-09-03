@@ -1,10 +1,10 @@
 import SideBar from "@/components/SideBar"
 import run from "../../public/run.svg"
 import Image from "next/image"
+import Link from "next/link"
 export default function Dashboard(){
     return(
         <>
-        <body className="bg-[#09090A] h-screen">
         {/* sidebar */}
         <div className="flex">
             <SideBar/>
@@ -143,7 +143,6 @@ export default function Dashboard(){
         </div>
 
         
-        </body>
 
         </>
     )

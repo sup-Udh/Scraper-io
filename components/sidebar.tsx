@@ -8,6 +8,7 @@ import logo from "../public/logo.svg"
 import logout from "../public/logout.svg"
 const SideBar = () => {
     return(
+        <>
         <body>
         <div className="fixed top-0 left-0 h-screen w-16 m-0 flex flex-col bg-[#09090A] border border-[#1F1F22] shadow-lg">
             {/* Main logo */}
@@ -102,6 +103,7 @@ const SideBar = () => {
 
 
         </body>
+        </>
     )
 
 }
