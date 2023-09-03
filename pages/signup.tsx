@@ -1,19 +1,42 @@
-import InputButton from "@/components/InputButton"
-export default function signup(){
+export default function singup(){
+
     return(
         <>
-        <div className="flex justify-center mt-[18rem]">
-            <div>
-                <input className="border border-[#818181] w-[25rem] h-[2.5rem] pl-4 rounded-md"type="text" placeholder="Email Address" />
-            </div>
-            <br />
-           
+        <div className="flex justify-center mt-[10rem]">
+        <div className="mr-[15.25rem] ">
+        <h1 className="text-xl font-bold">Sign Up</h1>
         </div>
-        <InputButton />
-            <div className="flex justify-center">
-                <h3 className="underline text-gray-400 mt-[0.25rem]">Already have an account? Log in</h3>
+        <br />
+        {/* form */}
+        
 
-            </div>
+
+        </div>
+
+        <div className="mt-[2.25rem] flex justify-center mr-[2rem]">
+            <form>
+                <p className="font-light text-[16px]">Name</p>
+                <input className="mt-[0.25rem] border border-sky-500 rounded-md w-[300px] h-[36px]" placeholder="naruto" />
+
+
+                <p className="font-light text-[16px]">Name</p>
+                <input className="mt-[0.25rem] border border-sky-500 rounded-md w-[300px] h-[36px]" placeholder="naruto" />
+
+                <p className="font-light text-[16px]">Name</p>
+                <input className="mt-[0.25rem] border border-sky-500 rounded-md w-[300px] h-[36px]" placeholder="naruto" />
+
+
+                <p className="font-light text-[16px]">Name</p>
+                <input className="mt-[0.25rem] border border-sky-500 rounded-md w-[300px] h-[36px]" placeholder="naruto" />
+
+
+                <p className="font-light text-[16px]">Name</p>
+                <input className="mt-[0.25rem] border border-sky-500 rounded-md w-[300px] h-[36px]" placeholder="naruto" />
+
+                
+            </form>
+        </div>
         </>
+
     )
 }
