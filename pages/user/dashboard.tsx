@@ -2,10 +2,16 @@ import SideBar from "@/components/SideBar"
 import run from "../../public/run.svg"
 import Image from "next/image"
 import Link from "next/link"
+// no ssr
+import dynamic from 'next/dynamic'
+ 
+const DynamicComponentWithNoSSR = dynamic(() => import('@/components/SideBar'))
+
 export default function Dashboard(){
     return(
         <>
-        <body>
+        <DynamicComponentWithNoSSR />
+        <div>
         {/* sidebar */}
         <div className="flex">
             <SideBar/>
@@ -142,8 +148,8 @@ export default function Dashboard(){
            
 
         </div>
+        </div>
 
-        </body>
 
         
 

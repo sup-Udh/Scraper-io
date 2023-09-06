@@ -84,7 +84,8 @@ const SideBar = () => {
             </div>
 
             {/* logout.svg */}
-            <div className="my-[20rem]">
+            {/* create a div that places content in the bottom */}
+            <div className="mt-[15rem]">
                 <span>
                 <span className="sidebar-icon ">
                     <Image 

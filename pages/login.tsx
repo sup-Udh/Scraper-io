@@ -1,28 +1,38 @@
 export default function login(){
     return(
         <>
-        <div className="flex justify-center mt-[18rem]">
-            <div>
-                <input className="border border-[#818181] w-[25rem] h-[2.5rem] pl-4 rounded-md"type="text" placeholder="Email Address" />
-            </div>
-            <br />
-           
+        <div className="flex justify-center mt-[10rem] font-[Poppins]">
+
+
+        <div className="mr-[17.50rem] ">
+        <h1 className="text-xl font-bold">Log in</h1>
         </div>
-        <div className="flex justify-center mt-[1.25rem]">
-                <input className="border border-[#818181] w-[25rem] h-[2.5rem] pl-4 rounded-md"type="text" placeholder="Your Password" />
-            </div>
 
-            <div className="flex justify-center mt-[1.25rem]">
-                <button className="bg-[#4F75FF] w-[25rem] rounded-md  h-[2.3rem]">Login</button>
-            </div>
 
-            <div className="flex justify-center">
-                <h3 className="underline text-gray-400 mt-[0.25rem] " >Forgot your password?</h3>
-            </div>
-            <div className="flex justify-center">
-                <h3 className="underline text-gray-400 mt-[0.25rem]">Don&apos;t have an account? Sign up</h3>
 
-            </div>
+        </div>
+
+        <div className="mt-[2.25rem] flex justify-center mr-[2rem] font-[Poppins]">
+            <form>
+                <p className="font-light text-[16px]">Name</p>
+                <input className="mt-[0.25rem] border-2 border-[#3C3E43] placeholder-gray-500 placeholder:pl-[0.25rem] text-normal font-[Poppins] rounded-md w-[300px] h-[36px] mt-[0.35rem] bg-black" placeholder="naruto" />
+
+
+                <p className="font-light text-[16px] mt-[0.25rem]">Email</p>
+                <input className="mt-[0.25rem] bg-black border-2 border-[#3C3E43] placeholder-gray-500 placeholder:pl-[0.25rem] text-normal rounded-md w-[300px] h-[36px] mt-[0.35rem]" placeholder="naruto@gmail.com" />
+                <hr  className="mt-[2.25rem] bg-[#3C3E43]"/>
+                <br />
+                <a>
+                    <div className=" w-[300px] h-[38px] flex justify-center bg-[#7F61F4] rounded-lg">
+                                    <button className="text-white font-normal text-base ">Log in</button>
+
+                </div>
+
+                </a>
+
+</form>
+
+</div>
         </>
     )
 }
