@@ -1,3 +1,6 @@
+import axios from "axios"
+import { useState } from "react"
+
 export default function login(){
     return(
         <>
@@ -19,7 +22,7 @@ export default function login(){
 
 
                 <p className="font-light text-[16px] mt-[0.25rem]">Email</p>
-                <input className="mt-[0.25rem] bg-black border-2 border-[#3C3E43] placeholder-gray-500 placeholder:pl-[0.25rem] text-normal rounded-md w-[300px] h-[36px] mt-[0.35rem]" placeholder="naruto@gmail.com" />
+                <input className="mt-[0.25rem] bg-black border-2 border-[#3C3E43] placeholder-gray-500 placeholder:pl-[0.25rem] text-normal rounded-md w-[300px] h-[36px]" placeholder="naruto@gmail.com" />
                 <hr  className="mt-[2.25rem] bg-[#3C3E43]"/>
                 <br />
                 <a>

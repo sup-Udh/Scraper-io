@@ -4,10 +4,20 @@ import Image from "next/image"
 import Link from "next/link"
 // no ssr
 import dynamic from 'next/dynamic'
- 
-const DynamicComponentWithNoSSR = dynamic(() => import('@/components/SideBar'))
+import { useState, useEffect } from 'react'
+
+const DynamicComponentWithNoSSR = dynamic(() => import('@/components/SideBar'), {
+    ssr: false
+})
 
 export default function Dashboard(){
+    const [isClient, setIsClient] = useState(false)
+ 
+    useEffect(() => {
+      setIsClient(true)
+    }, [])
+
+    
     return(
         <>
         <div>
