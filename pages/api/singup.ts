@@ -12,7 +12,7 @@ export default async function handler(req: any, res: any){
             port: 587,
             auth: {
                 user: 'udhay1co.de@gmail.com',
-                pass: ''
+                pass: 'TsndqO3KmcvNjQyL'
             }
         })
         await transporter.sendMail({

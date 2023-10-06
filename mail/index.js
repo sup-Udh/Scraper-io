@@ -1,6 +1,7 @@
 const express = require('express');
 const { createTransport } = require('nodemailer');
-const fs = require("fs")
+const fs = require("fs");
+const { error } = require('console');
 
 
   // async..await is not allowed in global scope, must use a wrapper
@@ -23,6 +24,9 @@ const fs = require("fs")
       
       
     })
+    if(error){
+        console.log(error)
+    }
 
 
   }
