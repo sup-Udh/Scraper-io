@@ -19,7 +19,7 @@ const fs = require("fs")
       from: "crawlynoreply@gmail.com",
       to: "udhay1co.de@gmail.com",
       subject: "Hello ✔",
-      html: "<b>working right?</b>"
+      html: "<b>working right? lololol</b>"
       
       
     })

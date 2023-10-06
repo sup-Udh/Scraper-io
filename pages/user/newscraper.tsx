@@ -19,6 +19,7 @@ export default function newscraper(){
     }
     return(
         <>
+        <h1>Setup Your Scraper</h1>
         <form>
             <input placeholder="Name" value={name} onChange={(e) => setName(e.target.value)}/>
             <input placeholder="default URLS"/>

@@ -20,7 +20,6 @@ export default function Dashboard(){
     
     return(
         <>
-        <DynamicComponentWithNoSSR />
         <div>
         {/* sidebar */}
         <div className="flex">
