@@ -1,29 +1,31 @@
 import run from "../../public/run.svg"
 import Image from "next/image"
-import SideBar from "@/components/SideBar"
-import dynamic from "next/dynamic"
 import { Cookies } from "react-cookie"
+import SideBar from "@/components/SideBar"
 
-const DynamicComponentWithNoSSR = dynamic(
-    () => import('@/components/SideBar'),
-    { ssr: false }
-  )
+
 export default function Dashboard(){
-    const cookies = new Cookies()
-    var fetch = cookies.get("user")
-    if(!fetch){
-        return(
-            <>
-            <h1>unAuthorised</h1>
-            </>
-        )
-    }else{
+    
+    
+    // const cookies = new Cookies()
+    // var fetch = cookies.get("user")
+    // if(!fetch){
+    //     return(
+
+    //         <>
+    //         <div suppressHydrationWarning={true}>
+    //         <h1>unAuthorised</h1>
+
+    //         </div>
+    //         </>
+    //     )
+    // }else{
 
     return(
-        <>
-        <div>
-            <DynamicComponentWithNoSSR />
+        <div suppressHydrationWarning={true}>
+
         {/* sidebar */}
+        <SideBar />
         {/* Page content */}
 
         <div className="mx-[7.5rem]">
@@ -160,8 +162,7 @@ export default function Dashboard(){
 
         
 
-        </>
     )
 }
-}
+
 
