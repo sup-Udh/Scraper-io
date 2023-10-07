@@ -24,7 +24,7 @@ export default async function handler(req: any, res: any){
           
           
         })
-
+// test
     }
 
     if(req.method === "POST")  {
