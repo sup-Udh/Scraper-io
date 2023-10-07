@@ -17,7 +17,7 @@ export default function singup(){
     const singup = async (e: any) => {
         e.preventDefault();
         const response = await axios.post("/api/singup", {
-            username,
+            name: username,
             email: email,
             password: password,
         })

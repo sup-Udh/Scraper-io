@@ -13,7 +13,9 @@ export default function Dashboard(){
     var fetch = cookies.get("user")
     if(!fetch){
         return(
-            <h1>Unauthorised</h1>
+            <>
+            <h1>unAuthorised</h1>
+            </>
         )
     }else{
 

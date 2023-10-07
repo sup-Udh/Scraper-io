@@ -31,6 +31,7 @@ export default async function handler(req: any, res: any){
         const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
+        const username = req.body.username;
         if(!email || !email.includes("@") || !password){
             res.status(201).json({ message: "Please enter email, password and name" });
 
@@ -51,7 +52,7 @@ export default async function handler(req: any, res: any){
 
                 const result = await users.insertOne(
                     {
-                        name: name, 
+                        name: username, 
                         email: email, 
                         password: hashedPassword,
                         verified: false,
