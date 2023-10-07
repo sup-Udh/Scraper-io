@@ -1,0 +1,79 @@
+[
+    {
+      "text": "the user interface component is fixed",
+      "category": "frontend",
+      "action": "fix"
+    },
+    {
+      "text": "the css file look inituitive",
+      "category": "frontend"
+    },
+    {
+      "text": "i need a few ui designs",
+      "category": "frontend"
+    },
+    {
+      "text": "the database has issues",
+      "category": "backend"
+    },
+    {
+      "text": "the button is centered",
+      "category": "frontend"
+    },
+    {
+      "text": "make it clickable",
+      "category": "frontend"
+    },
+    {
+      "text": "i did the api integration",
+      "category": "backend"
+    },
+    {
+      "text": "a driver code should have less memory usgae",
+      "category": "backend"
+    },
+    {
+      "text": "it needs more memory",
+      "category": "backend"
+    },
+    {
+      "text": "code with responsive design in users interface",
+      "category": "frontend"
+    },
+    {
+      "text": "navigate the website easily",
+      "category": "frontend"
+    },
+    {
+      "text": "user login and authentication",
+      "category": "backend"
+    },
+    {
+      "text": "forms and dropdowns lists",
+      "category": "frontend"
+    },
+    {
+      "text": "username password email are stored",
+      "category": "backend"
+    },
+    {
+      "text": "programming loading animation",
+      "category": "frontend"
+    },
+    {
+      "text": "mysql, mongo, firebase databases",
+      "category": "backend"
+    },
+    {
+      "text": "restful api is useful with backend",
+      "category": "backend"
+    },
+    {
+        "text": "data access layer is not presentation layer",
+        "category": "backend"
+    },
+    {
+        "text": "the web browser loads dynamic webpages slowly",
+        "category": "frontend"
+    }
+  ]

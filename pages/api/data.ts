@@ -1,7 +1,11 @@
-export default function datahandler(req: any, res: any){
+const cheerio = require('cheerio');
+const fs = require('fs');
+export default async function datahandler(req: any, res: any){
     if(req.method === "POST"){
         const body = req.body.page;
-        console.log(body);
+        const $ = cheerio.load(body);
+        const title = await $('title').text();
+        console.log(title);
     }
 
 }

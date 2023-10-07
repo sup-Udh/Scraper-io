@@ -1,5 +1,6 @@
 import { connectDB } from "@/models/db";
 const { createTransport } = require('nodemailer')
+const bcrypt = require('bcrypt')
 const fs = require('fs')
 
 
@@ -12,7 +13,7 @@ export default async function handler(req: any, res: any){
             port: 587,
             auth: {
                 user: 'udhay1co.de@gmail.com',
-                pass: 'TsndqO3KmcvNjQyL'
+                pass: process.env.EMAIL_PASS
             }
         })
         await transporter.sendMail({
@@ -42,7 +43,20 @@ export default async function handler(req: any, res: any){
                 res.status(201).json({message: "User exists"})
                 return;
             }else{
-                const result = await users.insertOne({name: name, email: email, password: password})
+                const hashedPassword = await bcrypt.hash(password, 12);
+                // unhash password
+                // const isMatch = await bcrypt.compare(password, hashedPassword);
+                // console.log(isMatch);
+                
+
+                const result = await users.insertOne(
+                    {
+                        name: name, 
+                        email: email, 
+                        password: hashedPassword,
+                        verified: false,
+                    }
+                    )
                 res.status(201).json({message: "User created"})
                 EmailOTP();
 
