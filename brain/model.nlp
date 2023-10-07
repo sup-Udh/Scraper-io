@@ -1,0 +1,790 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "articl,from,new,scrape,the,time,york": {
+            "intent": "scrape-articles",
+            "domain": "default"
+          },
+          "bbc,crawl,from,news": {
+            "intent": "scrape-articles",
+            "domain": "default"
+          },
+          "com,data,exampl,from,retriev": {
+            "intent": "scrape-data",
+            "domain": "default"
+          },
+          "amazon,extract,from,inform,on,page,product,the": {
+            "intent": "scrape-data",
+            "domain": "default"
+          },
+          "collect,from,review,tripadvisor": {
+            "intent": "scrape-reviews",
+            "domain": "default"
+          },
+          "cnn,from,get,news,updat": {
+            "intent": "scrape-articles",
+            "domain": "default"
+          },
+          "com,data,from,scrape,weather": {
+            "intent": "scrape-data",
+            "domain": "default"
+          },
+          "about,contact,exampl,from,inform,of,org,page,retriev,the,us": {
+            "intent": "scrape-data",
+            "domain": "default"
+          },
+          "com,crawl,data,financ,from,market,stock,yahoo": {
+            "intent": "scrape-stock-data",
+            "domain": "default"
+          },
+          "collect,espn,from,score,sport": {
+            "intent": "scrape-articles",
+            "domain": "default"
+          },
+          "allrecip,com,from,recip,scrape": {
+            "intent": "scrape-articles",
+            "domain": "default"
+          },
+          "data,ebay,from,product,scrape": {
+            "intent": "scrape-data",
+            "domain": "default"
+          },
+          "amazon,data,from,product,scrape": {
+            "intent": "scrape-data",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "scrape-articles": "default",
+          "scrape-data": "default",
+          "scrape-reviews": "default",
+          "scrape-stock-data": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Scrape articles from The New York Times",
+            "intent": "scrape-articles"
+          },
+          {
+            "domain": "default",
+            "utterance": "Crawl news from BBC News",
+            "intent": "scrape-articles"
+          },
+          {
+            "domain": "default",
+            "utterance": "Retrieve data from example.com",
+            "intent": "scrape-data"
+          },
+          {
+            "domain": "default",
+            "utterance": "Extract information from the product page on Amazon",
+            "intent": "scrape-data"
+          },
+          {
+            "domain": "default",
+            "utterance": "Collect reviews from TripAdvisor",
+            "intent": "scrape-reviews"
+          },
+          {
+            "domain": "default",
+            "utterance": "Get news updates from CNN",
+            "intent": "scrape-articles"
+          },
+          {
+            "domain": "default",
+            "utterance": "Scrape weather data from weather.com",
+            "intent": "scrape-data"
+          },
+          {
+            "domain": "default",
+            "utterance": "Retrieve contact information from the About Us page of example.org",
+            "intent": "scrape-data"
+          },
+          {
+            "domain": "default",
+            "utterance": "Crawl stock market data from finance.yahoo.com",
+            "intent": "scrape-stock-data"
+          },
+          {
+            "domain": "default",
+            "utterance": "Collect sports scores from ESPN",
+            "intent": "scrape-articles"
+          },
+          {
+            "domain": "default",
+            "utterance": "Scrape recipes from allrecipes.com",
+            "intent": "scrape-articles"
+          },
+          {
+            "domain": "default",
+            "utterance": "Scrape product data from eBay",
+            "intent": "scrape-data"
+          },
+          {
+            "domain": "default",
+            "utterance": "Scrape product data from Amazon",
+            "intent": "scrape-data"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "scrape": 1,
+              "articl": 1,
+              "from": 1,
+              "the": 1,
+              "new": 1,
+              "york": 1,
+              "time": 1,
+              "crawl": 1,
+              "news": 1,
+              "bbc": 1,
+              "retriev": 1,
+              "data": 1,
+              "exampl": 1,
+              "com": 1,
+              "extract": 1,
+              "inform": 1,
+              "product": 1,
+              "page": 1,
+              "on": 1,
+              "amazon": 1,
+              "collect": 1,
+              "review": 1,
+              "tripadvisor": 1,
+              "get": 1,
+              "updat": 1,
+              "cnn": 1,
+              "weather": 1,
+              "contact": 1,
+              "about": 1,
+              "us": 1,
+              "of": 1,
+              "org": 1,
+              "stock": 1,
+              "market": 1,
+              "financ": 1,
+              "yahoo": 1,
+              "sport": 1,
+              "score": 1,
+              "espn": 1,
+              "recip": 1,
+              "allrecip": 1,
+              "ebay": 1
+            },
+            "intents": {
+              "scrape-articles": 1,
+              "scrape-data": 1,
+              "scrape-reviews": 1,
+              "scrape-stock-data": 1
+            },
+            "intentFeatures": {
+              "scrape-articles": {
+                "scrape": 1,
+                "articl": 1,
+                "from": 1,
+                "the": 1,
+                "new": 1,
+                "york": 1,
+                "time": 1,
+                "crawl": 1,
+                "news": 1,
+                "bbc": 1,
+                "get": 1,
+                "updat": 1,
+                "cnn": 1,
+                "collect": 1,
+                "sport": 1,
+                "score": 1,
+                "espn": 1,
+                "recip": 1,
+                "allrecip": 1,
+                "com": 1
+              },
+              "scrape-data": {
+                "retriev": 1,
+                "data": 1,
+                "from": 1,
+                "exampl": 1,
+                "com": 1,
+                "extract": 1,
+                "inform": 1,
+                "the": 1,
+                "product": 1,
+                "page": 1,
+                "on": 1,
+                "amazon": 1,
+                "scrape": 1,
+                "weather": 1,
+                "contact": 1,
+                "about": 1,
+                "us": 1,
+                "of": 1,
+                "org": 1,
+                "ebay": 1
+              },
+              "scrape-reviews": {
+                "collect": 1,
+                "review": 1,
+                "from": 1,
+                "tripadvisor": 1
+              },
+              "scrape-stock-data": {
+                "crawl": 1,
+                "stock": 1,
+                "market": 1,
+                "data": 1,
+                "from": 1,
+                "financ": 1,
+                "yahoo": 1,
+                "com": 1
+              }
+            },
+            "featuresToIntent": {
+              "scrape": [
+                "scrape-articles",
+                "scrape-data"
+              ],
+              "articl": [
+                "scrape-articles"
+              ],
+              "from": [
+                "scrape-articles",
+                "scrape-data",
+                "scrape-reviews",
+                "scrape-stock-data"
+              ],
+              "the": [
+                "scrape-articles",
+                "scrape-data"
+              ],
+              "new": [
+                "scrape-articles"
+              ],
+              "york": [
+                "scrape-articles"
+              ],
+              "time": [
+                "scrape-articles"
+              ],
+              "crawl": [
+                "scrape-articles",
+                "scrape-stock-data"
+              ],
+              "news": [
+                "scrape-articles"
+              ],
+              "bbc": [
+                "scrape-articles"
+              ],
+              "get": [
+                "scrape-articles"
+              ],
+              "updat": [
+                "scrape-articles"
+              ],
+              "cnn": [
+                "scrape-articles"
+              ],
+              "collect": [
+                "scrape-articles",
+                "scrape-reviews"
+              ],
+              "sport": [
+                "scrape-articles"
+              ],
+              "score": [
+                "scrape-articles"
+              ],
+              "espn": [
+                "scrape-articles"
+              ],
+              "recip": [
+                "scrape-articles"
+              ],
+              "allrecip": [
+                "scrape-articles"
+              ],
+              "com": [
+                "scrape-articles",
+                "scrape-data",
+                "scrape-stock-data"
+              ],
+              "retriev": [
+                "scrape-data"
+              ],
+              "data": [
+                "scrape-data",
+                "scrape-stock-data"
+              ],
+              "exampl": [
+                "scrape-data"
+              ],
+              "extract": [
+                "scrape-data"
+              ],
+              "inform": [
+                "scrape-data"
+              ],
+              "product": [
+                "scrape-data"
+              ],
+              "page": [
+                "scrape-data"
+              ],
+              "on": [
+                "scrape-data"
+              ],
+              "amazon": [
+                "scrape-data"
+              ],
+              "weather": [
+                "scrape-data"
+              ],
+              "contact": [
+                "scrape-data"
+              ],
+              "about": [
+                "scrape-data"
+              ],
+              "us": [
+                "scrape-data"
+              ],
+              "of": [
+                "scrape-data"
+              ],
+              "org": [
+                "scrape-data"
+              ],
+              "ebay": [
+                "scrape-data"
+              ],
+              "review": [
+                "scrape-reviews"
+              ],
+              "tripadvisor": [
+                "scrape-reviews"
+              ],
+              "stock": [
+                "scrape-stock-data"
+              ],
+              "market": [
+                "scrape-stock-data"
+              ],
+              "financ": [
+                "scrape-stock-data"
+              ],
+              "yahoo": [
+                "scrape-stock-data"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "scrape",
+                "articl",
+                "from",
+                "the",
+                "new",
+                "york",
+                "time",
+                "crawl",
+                "news",
+                "bbc",
+                "retriev",
+                "data",
+                "exampl",
+                "com",
+                "extract",
+                "inform",
+                "product",
+                "page",
+                "on",
+                "amazon",
+                "collect",
+                "review",
+                "tripadvisor",
+                "get",
+                "updat",
+                "cnn",
+                "weather",
+                "contact",
+                "about",
+                "us",
+                "of",
+                "org",
+                "stock",
+                "market",
+                "financ",
+                "yahoo",
+                "sport",
+                "score",
+                "espn",
+                "recip",
+                "allrecip",
+                "ebay"
+              ],
+              "intents": [
+                "scrape-articles",
+                "scrape-data",
+                "scrape-reviews",
+                "scrape-stock-data"
+              ],
+              "perceptrons": [
+                [
+                  1.7193537950515747,
+                  1.6913492679595947,
+                  3.522928237915039,
+                  0.4976871907711029,
+                  1.6913492679595947,
+                  1.6913492679595947,
+                  1.6913492679595947,
+                  1.9332752227783203,
+                  4.280853271484375,
+                  2.6935784816741943,
+                  -1.0853517055511475,
+                  -4.984889507293701,
+                  -1.0853517055511475,
+                  0.0900401845574379,
+                  -0.6049736142158508,
+                  -1.105617880821228,
+                  -2.222029685974121,
+                  -1.105617880821228,
+                  -0.6049736142158508,
+                  -1.2939953804016113,
+                  0.1888025999069214,
+                  -2.751068353652954,
+                  -2.751068353652954,
+                  1.578182339668274,
+                  1.578182339668274,
+                  1.578182339668274,
+                  -1.9828462600708008,
+                  -0.3594922423362732,
+                  -0.3594922423362732,
+                  -0.3594922423362732,
+                  -0.3594922423362732,
+                  -0.3594922423362732,
+                  -0.6883710026741028,
+                  -0.6883710026741028,
+                  -0.6883710026741028,
+                  -0.6883710026741028,
+                  2.950061559677124,
+                  2.950061559677124,
+                  2.950061559677124,
+                  3.5500781536102295,
+                  3.5500781536102295,
+                  -0.8288931846618652,
+                  1.7630667863913412
+                ],
+                [
+                  1.528765082359314,
+                  -1.1658223867416382,
+                  1.4594117403030396,
+                  0.5066746473312378,
+                  -1.1658223867416382,
+                  -1.1658223867416382,
+                  -1.1658223867416382,
+                  -2.1719605922698975,
+                  -0.923075258731842,
+                  -0.28837698698043823,
+                  2.6310513019561768,
+                  5.677104949951172,
+                  2.6310513019561768,
+                  1.2373063564300537,
+                  1.3267782926559448,
+                  1.8555704355239868,
+                  3.3192548751831055,
+                  1.8555704355239868,
+                  1.3267782926559448,
+                  1.825551152229309,
+                  -1.2089647054672241,
+                  -0.5911253690719604,
+                  -0.5911253690719604,
+                  -0.49931633472442627,
+                  -0.49931633472442627,
+                  -0.49931633472442627,
+                  3.3171186447143555,
+                  0.5209774374961853,
+                  0.5209774374961853,
+                  0.5209774374961853,
+                  0.5209774374961853,
+                  0.5209774374961853,
+                  -1.7488590478897095,
+                  -1.7488590478897095,
+                  -1.7488590478897095,
+                  -1.7488590478897095,
+                  -0.4769246280193329,
+                  -0.4769246280193329,
+                  -0.4769246280193329,
+                  -2.4444024562835693,
+                  -2.4444024562835693,
+                  1.4949147701263428,
+                  0.7231541683378375
+                ],
+                [
+                  -0.7117100954055786,
+                  -0.13353519141674042,
+                  1.125759482383728,
+                  -0.4430074393749237,
+                  -0.13353519141674042,
+                  -0.13353519141674042,
+                  -0.13353519141674042,
+                  -0.5443876385688782,
+                  -0.760290265083313,
+                  -0.3634680211544037,
+                  -0.23500634729862213,
+                  -0.591371476650238,
+                  -0.23500634729862213,
+                  -0.6097614765167236,
+                  -0.09882262349128723,
+                  -0.3074498474597931,
+                  -0.27319034934043884,
+                  -0.3074498474597931,
+                  -0.09882262349128723,
+                  -0.15339311957359314,
+                  3.121079206466675,
+                  4.715375900268555,
+                  4.715375900268555,
+                  -0.366213858127594,
+                  -0.366213858127594,
+                  -0.366213858127594,
+                  -0.18810556828975677,
+                  -0.16789039969444275,
+                  -0.16789039969444275,
+                  -0.16789039969444275,
+                  -0.16789039969444275,
+                  -0.16789039969444275,
+                  -0.144317165017128,
+                  -0.144317165017128,
+                  -0.144317165017128,
+                  -0.144317165017128,
+                  -1.6044920682907104,
+                  -1.6044920682907104,
+                  -1.6044920682907104,
+                  -0.18598425388336182,
+                  -0.18598425388336182,
+                  -0.11843708902597427,
+                  0.5633813382412757
+                ],
+                [
+                  -1.2833575010299683,
+                  -0.029929572716355324,
+                  -0.4281512200832367,
+                  -0.05251822993159294,
+                  -0.029929572716355324,
+                  -0.029929572716355324,
+                  -0.029929572716355324,
+                  1.9799952507019043,
+                  -0.7439557909965515,
+                  -0.720803439617157,
+                  -0.8312873840332031,
+                  0.9361786842346191,
+                  -0.8312873840332031,
+                  1.0766855478286743,
+                  -0.008243120275437832,
+                  -0.008243120275437832,
+                  -0.4595645070075989,
+                  -0.008243120275437832,
+                  -0.008243120275437832,
+                  -0.20795834064483643,
+                  -0.1698755919933319,
+                  -0.029479069635272026,
+                  -0.029479069635272026,
+                  -0.011886324733495712,
+                  -0.011886324733495712,
+                  -0.011886324733495712,
+                  -0.4369502663612366,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0,
+                  2.7270195484161377,
+                  2.7270195484161377,
+                  2.7270195484161377,
+                  2.7270195484161377,
+                  -0.10475286841392517,
+                  -0.10475286841392517,
+                  -0.10475286841392517,
+                  -0.25633060932159424,
+                  -0.25633060932159424,
+                  -0.20194612443447113,
+                  -0.21366063638651087
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Scrape articles from The New York Times"
+      ],
+      [
+        "en",
+        "Crawl news from BBC News"
+      ],
+      [
+        "en",
+        "Retrieve data from example.com"
+      ],
+      [
+        "en",
+        "Extract information from the product page on Amazon"
+      ],
+      [
+        "en",
+        "Collect reviews from TripAdvisor"
+      ],
+      [
+        "en",
+        "Get news updates from CNN"
+      ],
+      [
+        "en",
+        "Scrape weather data from weather.com"
+      ],
+      [
+        "en",
+        "Retrieve contact information from the About Us page of example.org"
+      ],
+      [
+        "en",
+        "Crawl stock market data from finance.yahoo.com"
+      ],
+      [
+        "en",
+        "Collect sports scores from ESPN"
+      ],
+      [
+        "en",
+        "Scrape recipes from allrecipes.com"
+      ],
+      [
+        "en",
+        "Scrape product data from eBay"
+      ],
+      [
+        "en",
+        "Scrape product data from Amazon"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "scrape-articles": [
+          {
+            "answer": "Scraping articles from The New York Times"
+          },
+          {
+            "answer": "Crawling news from BBC News"
+          },
+          {
+            "answer": "Getting news updates from CNN"
+          }
+        ],
+        "scrape-data": [
+          {
+            "answer": "Retrieving data from example.com"
+          },
+          {
+            "answer": "Extracting information from the product page on Amazon"
+          },
+          {
+            "answer": "Scraping weather data from weather.com"
+          },
+          {
+            "answer": "Retrieving contact information from the About Us page of example.org"
+          }
+        ],
+        "scrape-reviews": [
+          {
+            "answer": "Collecting reviews from TripAdvisor"
+          }
+        ],
+        "scrape-stock-data": [
+          {
+            "answer": "Crawling stock market data from finance.yahoo.com"
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}

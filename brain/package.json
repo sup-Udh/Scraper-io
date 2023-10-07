@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "brain.js": "^2.0.0-beta.17"
+    "node-nlp": "^4.27.0"
   }
 }
