@@ -26,6 +26,7 @@
     "nodemailer": "^6.9.5",
     "react": "18.2.0",
     "react-chartjs-2": "^5.2.0",
+    "react-cookie": "^6.1.1",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
     "typescript": "5.1.6"

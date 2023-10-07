@@ -1,9 +1,14 @@
 import axios from "axios"
 import { useState } from "react"
+import { useRouter } from "next/router"
+import { useCookies } from "react-cookie"
 
 
 
 export default function singup(){
+    const router = useRouter()
+
+    const [cookies, setCookie] = useCookies(["user"])
     const [username, setUsername] = useState("")
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -26,6 +31,13 @@ export default function singup(){
         }
         else if(response.data.message === "User created"){
             alert("User Created")
+            setCookie("user", JSON.stringify(data), {
+                path: "/",
+                maxAge: 3600, // 1 hr
+                sameSite: true,
+              });
+        
+            router.push("/user/dashboard")
         }
     }
 

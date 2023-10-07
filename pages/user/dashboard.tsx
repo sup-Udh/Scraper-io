@@ -1,30 +1,18 @@
-import SideBar from "@/components/SideBar"
 import run from "../../public/run.svg"
 import Image from "next/image"
-import Link from "next/link"
-// no ssr
-import dynamic from 'next/dynamic'
-import { useState, useEffect } from 'react'
+import SideBar from "@/components/SideBar"
+import dynamic from "next/dynamic"
 
-const DynamicComponentWithNoSSR = dynamic(() => import('@/components/SideBar'), {
-    ssr: false
-})
-
+const DynamicComponentWithNoSSR = dynamic(
+    () => import('@/components/SideBar'),
+    { ssr: false }
+  )
 export default function Dashboard(){
-    const [isClient, setIsClient] = useState(false)
- 
-    useEffect(() => {
-      setIsClient(true)
-    }, [])
-
-    
     return(
         <>
         <div>
+            <DynamicComponentWithNoSSR />
         {/* sidebar */}
-        <div className="flex">
-            <SideBar/>
-        </div>
         {/* Page content */}
 
         <div className="mx-[7.5rem]">
@@ -158,7 +146,6 @@ export default function Dashboard(){
 
         </div>
         </div>
-
 
         
 
