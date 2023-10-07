@@ -7,7 +7,7 @@ export default function newscraper(){
 
         try{
             // send data to api
-            const response = await axios.post("/api/scraper/new_scraper", {
+            const response = await axios.post("", {
                 name
             })
             console.log(response)

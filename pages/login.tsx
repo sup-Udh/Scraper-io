@@ -1,7 +1,9 @@
 import axios from "axios"
 import { useState } from "react"
-
+import { useRouter } from "next/router"
+import { Cookies } from "react-cookie"
 export default function login(){
+    const router = useRouter()
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
 
@@ -13,11 +15,15 @@ export default function login(){
         })
         console.log(res.data)
         if(res.data.message === "User not found" ){
-            alert("nothing foind")
+            alert("User Does Not Exist")
         }if(res.data.message === "Password is incorrect"){
             alert("incorrect password")
         }if (res.data.message === "Login successful"){
             alert("login successful")
+            const cookies = new Cookies()
+            cookies.set("user", res.data.token, {path: "/"})
+            router.push("user/dashboard")
+
         }
 
     }
