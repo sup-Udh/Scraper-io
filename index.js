@@ -9,3 +9,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
+
+// git push -f heroku api:master # run this to push to heroku
