@@ -2,12 +2,21 @@ import run from "../../public/run.svg"
 import Image from "next/image"
 import SideBar from "@/components/SideBar"
 import dynamic from "next/dynamic"
+import { Cookies } from "react-cookie"
 
 const DynamicComponentWithNoSSR = dynamic(
     () => import('@/components/SideBar'),
     { ssr: false }
   )
 export default function Dashboard(){
+    const cookies = new Cookies()
+    var fetch = cookies.get("user")
+    if(!fetch){
+        return(
+            <h1>Unauthorised</h1>
+        )
+    }else{
+
     return(
         <>
         <div>
@@ -151,5 +160,6 @@ export default function Dashboard(){
 
         </>
     )
+}
 }
 
