@@ -4,7 +4,7 @@ import  Sidebar  from "@/components/SideBar"
 import Step2Scraper from '@/components/step2Scraper';
 import Image from "next/image"
 const arrow = require('@/public/lol.png')
-
+import Step3Scraper from '@/components/step3Scraper';
 export default function newscraper(){
     const [currentDiv, setCurrentDiv] = useState(0);
 
@@ -86,6 +86,12 @@ export default function newscraper(){
                     </div>
                     </div>
                     {/* 3rd div */}
+                    <div>
+                      <div className='Main-3' style={{display: currentDiv === 2 ? 'block' : 'none'}}>
+                        <Step3Scraper />
+                      </div>
+                    </div>
+
                     <span className='text-white font-medium text-[18px]'>
                         <div className='pl-[2.25rem] mt-[0.25rem]'>
                         
