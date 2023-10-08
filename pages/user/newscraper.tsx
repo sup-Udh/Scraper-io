@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import  Sidebar  from "@/components/SideBar"
 import Step2Scraper from '@/components/step2Scraper';
+import Image from "next/image"
+const arrow = require('@/public/lol.png')
 
 export default function newscraper(){
     const [currentDiv, setCurrentDiv] = useState(0);
@@ -86,9 +88,16 @@ export default function newscraper(){
                     {/* 3rd div */}
                     <span className='text-white font-medium text-[18px]'>
                         <div className='pl-[2.25rem] mt-[0.25rem]'>
+                        
                         <button onClick={showNextDiv} className='bg-[#7F61F4] h-[38px] w-[116px] rounded-md shadow-md hover:bg-[#7F61F4]/90'>Next</button>
-                        <button onClick={showPrevDiv} hidden={currentDiv === 0}>
-        Show previous div
+                        <br />
+                        <button className='mt-[2.25rem]' onClick={showPrevDiv} hidden={currentDiv === 0}>
+                    <Image 
+                src={arrow}
+                alt="arrow"
+                width={25}
+                height={25}
+             />
       </button>
 
                         </div>
