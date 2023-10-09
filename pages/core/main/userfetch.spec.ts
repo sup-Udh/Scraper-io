@@ -1,18 +1,14 @@
 import {test , expect} from '@playwright/test';
+import { elements } from 'chart.js';
+import { url } from 'inspector';
 const axios = require('axios')
 
 test('has Element', async ({page}) => {
-    await page.goto('https://playwright.dev/docs/intro')
-    const pagecontent = await page.content()
-    axios.post('http://localhost:3000/api/data', {
-        page: pagecontent
+    // get data from api
+    const response = await axios.get('http://localhost:3000/api/test', {
+        url: url,
+        elements: elements
     })
-    .then(function (response: any) {
-        console.log(response);
-    })
-    .catch(function (error: any) {
-        console.log(error);
-    })
+    console.log(response.data)
 
- 
 })
