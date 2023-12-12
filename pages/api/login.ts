@@ -1,7 +1,11 @@
 import { connectDB } from "@/models/db"
 const bcrypt = require('bcrypt')
 export default async function handler(req: any, res: any){
+
     if(req.method === "POST"){
+        // Create An ID  for eacth user with math random with strings 
+        // const id = Math.random().toString(36).substr(2, 9);
+        
         var email = req.body.email
         var password = req.body.password
 

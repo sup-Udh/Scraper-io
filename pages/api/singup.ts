@@ -26,8 +26,20 @@ export default async function handler(req: any, res: any){
         })
 // test
     }
+    function makeid(length: any) {
+        var result           = '';
+        var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for ( var i = 0; i < length; i++ ) {
+           result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
+      }
 
     if(req.method === "POST")  {
+    
+
+
         const name = req.body.name;
         const email = req.body.email;
         const password = req.body.password;
@@ -52,13 +64,14 @@ export default async function handler(req: any, res: any){
 
                 const result = await users.insertOne(
                     {
+                        id: makeid(10),
                         name: username, 
                         email: email, 
                         password: hashedPassword,
                         verified: false,
                     }
                     )
-                res.status(201).json({message: "User created"})
+                res.status(201).json({message: "User created"}, result)
                 EmailOTP();
 
                 console.log(result);
